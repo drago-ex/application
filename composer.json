@@ -1,0 +1,21 @@
+{
+	"name": "drago-fw/drago",
+	"type": "library",
+	"description": "Simple Framework for small applications based on Nette Framework",
+	"license": ["MIT"],
+	"authors": [
+		{
+			"name": "Zdeněk Papučík",
+			"homepage": "https://github.com/accgit"
+		}
+	],
+	"require": {
+		"php": ">=5.6.0",
+		"nette/nette": "~2.3",
+		"drago-fw/dirs": "dev-master",
+		"drago-fw/translator": "dev-master"
+	},
+	"autoload": {
+		"classmap": ["src/"]
+	}
+}
