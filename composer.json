@@ -1,7 +1,7 @@
 {
 	"name": "drago-fw/drago",
 	"type": "library",
-	"description": "Drago Framework - for small applications based on Nette Framework",
+	"description": "Drago Framework for small applications based on Nette Framework",
 	"license": ["MIT"],
 	"authors": [
 		{
