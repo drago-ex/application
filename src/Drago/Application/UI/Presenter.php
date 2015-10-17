@@ -45,7 +45,7 @@ abstract class Presenter extends Nette\Application\UI\Presenter
 	 */
 	public function translator($module)
 	{
-		$path = $this->dirs->getModulesDir() . $module . '/locales/' . $this->lang . '.ini';
+		$path = $this->dirs->getModulesDir() . '/' . $module . '/locales/' . $this->lang . '.ini';
 		if (!is_file($path)) {
 			throw new \Exception('Missing translation file in ' . $path);
 
