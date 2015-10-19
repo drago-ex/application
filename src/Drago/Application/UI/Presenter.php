@@ -57,7 +57,6 @@ abstract class Presenter extends Nette\Application\UI\Presenter
 
 	/**
 	 * Delete files or directories.
-	 *
 	 * @param  string
 	 * @return void
 	 */
@@ -68,7 +67,6 @@ abstract class Presenter extends Nette\Application\UI\Presenter
 
 	/**
 	 * Success message for template.
-	 *
 	 * @param  string
 	 * @return \stdClass
 	 */
@@ -79,7 +77,6 @@ abstract class Presenter extends Nette\Application\UI\Presenter
 
 	/**
 	 * Warning message for template.
-	 *
 	 * @param  string
 	 * @return \stdClass
 	 */
@@ -90,7 +87,6 @@ abstract class Presenter extends Nette\Application\UI\Presenter
 
 	/**
 	 * Info message for template.
-	 *
 	 * @param  string
 	 * @return \stdClass
 	 */
