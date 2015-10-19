@@ -6,7 +6,7 @@ Nette compared with Drago configuration file is extended by an automatic search 
 Found configuration files are stored in the cache.
 
 If necessary, you can set the priority of the configuration file so that they assign a number, larger the
-number the higher the priority. **Sample: 9.filename.neon** suitable in case the route.
+number the higher the priority, **sample: 9.filename.neon** suitable in case the route.
 
 In addition, some methods are abbreviated. Here you can see how it looks such a setup
 [bootstrapper](https://github.com/drago-fw/skeleton/blob/master/app/booter.php).
