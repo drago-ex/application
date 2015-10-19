@@ -1,30 +1,46 @@
 ## Drago Framework
 Simple Framework for small applications based on Nette Framework.
 
-## Configurator class
-Nette compared with Drago configuration file is extended by an automatic search configuration files (*.neon).
-Found configuration files are stored in the cache.
+## Configurator
+Nette Configurator compared with the Dragon Configurator file is extended by an automatic
+search configuration files (* .neon). Found configuration files are stored in the cache.
 
-If necessary, you can set the priority of the configuration file so that they assign a number, larger the
-number the higher the priority, **sample: 9.filename.neon** suitable in case the route.
+If necessary, we can set the configuration file priority. Priority is set to put the number
+in front of the file name, the higher the number, the higher the priority.
 
 In addition, some methods are abbreviated. Here you can see how it looks such a setup
 [bootstrapper](https://github.com/drago-fw/skeleton/blob/master/app/booter.php).
 
 
 ## Flash messages
-Tips for flash messages we have defined in a single file: class
-[Drago\Flash.php](https://github.com/drago-fw/drago/blob/master/src/Drago/Application/UI/Flash.php).
+Tips for a flash message we have defined in this class: [Drago\Flash.php]
+(https://github.com/drago-fw/drago/blob/master/src/Drago/Application/UI/Flash.php).
 
 
 ## Presenter
-Flash messages are already pre-defined in the Presenter, On these lines:
-[Success message](https://github.com/drago-fw/drago/blob/master/src/Drago/Application/UI/Presenter.php#L75),
-[Warning message](https://github.com/drago-fw/drago/blob/master/src/Drago/Application/UI/Presenter.php#L86) and
-[Info message](https://github.com/drago-fw/drago/blob/master/src/Drago/Application/UI/Presenter.php#L97).
+Flash messages are already pre-defined in the Presenter:
+```php
+$this->messageSuccess($message);
+$this->messageWarning($message);
+$this->messageInfo($message);
+```
 
-It is also the presenter default [Translator](https://github.com/drago-fw/translator), easier access to individual
-directories [Dirs](https://github.com/drago-fw/dirs) and actual language that is sent to the template.
+Furthermore, the presenter located parameter language:
+```php
+public $lang;
+```
 
-**Other**: Furthermore, the presenter located is method for [delete files or directories]
-(https://github.com/drago-fw/drago/blob/master/src/Drago/Application/UI/Presenter.php#L64).
+Easier access to individual directories [Dirs](https://github.com/drago-fw/dirs):
+```php
+public $dirs;
+```
+
+Translation application is used [Translator](https://github.com/drago-fw/translator):
+```php
+$this->translator($module);
+```
+
+**Other**: Method for delete files or directories:
+```php
+$this->deleteThis($path);
+```
