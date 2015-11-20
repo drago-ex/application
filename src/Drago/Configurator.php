@@ -37,7 +37,7 @@ class Configurator extends Nette\Configurator
 		$parms = $this->parameters;
 		$trace = debug_backtrace(PHP_VERSION_ID >= 50400 ? DEBUG_BACKTRACE_IGNORE_ARGS : FALSE);
 		$parms['appDir'] = isset($trace[1]['file']) ? dirname($trace[1]['file']) : NULL;
-		$parms['wwwDir'] = $parms['wwwDir'] . '/www';
+		$parms['wwwDir'] = $parms['wwwDir'] . DIRECTORY_SEPARATOR . 'www';
 		return $parms;
 	}
 
