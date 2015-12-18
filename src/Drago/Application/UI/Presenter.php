@@ -42,6 +42,7 @@ abstract class Presenter extends Nette\Application\UI\Presenter
 	 * Transmission and processing of translation file.
 	 * @param  string
 	 * @return Translator
+	 * @throws \Exception
 	 */
 	public function translator($module)
 	{
