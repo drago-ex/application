@@ -5,6 +5,8 @@
  * Copyright (c) 2015, Zdeněk Papučík
  */
 namespace Drago\Application\Factory;
+
+use Nette;
 use Nette\Application\UI\Form;
 
 /**
