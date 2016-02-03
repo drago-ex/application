@@ -30,12 +30,12 @@ Furthermore, the presenter located parameter language:
 public $lang;
 ```
 
-Easier access to individual directories [Dirs](https://github.com/drago-fw/dirs):
+Easier access to individual directories [Dirs](https://github.com/drago-fw/dirs)
 ```php
 public $dirs;
 ```
 
-Translation application is used [Translator](https://github.com/drago-fw/translator):
+Translation application is used [Translator](https://github.com/drago-fw/translator)
 ```php
 $this->translator($module);
 ```
