@@ -13,7 +13,8 @@ use Nette;
  */
 class Flash extends Nette\Object
 {
-	const Warning = 'warning';
-	const Success = 'success';
-	const Info = 'info';
+	const
+		Warning = 'warning',
+		Success = 'success',
+		Info = 'info';
 }
