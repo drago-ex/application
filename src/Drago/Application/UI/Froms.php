@@ -4,7 +4,7 @@
  * This file is part of the Drago Framework
  * Copyright (c) 2015, Zdeněk Papučík
  */
-namespace Drago\Application\Factory;
+namespace Drago\Application\UI;
 
 use Nette;
 use Nette\Application\UI\Form;
