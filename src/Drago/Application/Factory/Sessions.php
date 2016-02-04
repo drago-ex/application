@@ -19,34 +19,35 @@ class Sessions extends Nette\Object
 	/**
 	 * @var Session
 	 */
-	private $session;
+	public $session;
 
 	/**
 	 * @var SessionSection
 	 */
-	private $sessionSection;
+	public $sessionSection;
 
-	public function __construct(Session $session)
+	public function __construct(Session $session, $section = NULL)
 	{
 		$this->session = $session;
-	}
-
-	/**
-	 * @return Session
-	 */
-	public function getSession()
-	{
-		return $this->session;
+		if (isset($section)) {
+			$this->sessionSection = $this->session->getSection($section);
+		}
 	}
 
 	/**
 	 * @param  string
 	 * @return SessionSection
 	 */
-	public function getSessionSection($section)
+	public function getSessionSection($section = NULL)
 	{
-		$this->sessionSection = $this->getSession()->getSection($section);
-		return $this->sessionSection;
+		if (isset($section)) {
+
+			$this->sessionSection = $this->session->getSection($section);
+			return $this->sessionSection;
+
+		} else {
+			return $this->sessionSection;
+		}
 	}
 
 }
