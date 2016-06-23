@@ -8,7 +8,6 @@ namespace Drago\Application\UI;
 
 use Nette;
 use Nette\Utils;
-use Drago\Directory\Dirs;
 
 /**
  * Drago presenter.
@@ -21,12 +20,6 @@ abstract class Presenter extends Nette\Application\UI\Presenter
 	 * @persistent
 	 */
 	public $lang;
-
-	/**
-	 * @var Dirs
-	 * @inject
-	 */
-	public $dirs;
 
 	// Setup rendering.
 	protected function beforeRender()
