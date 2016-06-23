@@ -9,7 +9,7 @@ namespace Drago\Application\UI;
 use Nette;
 use Nette\Utils;
 
-use Drago\Application\Directories\Dirs;
+use Drago\Directory\Dirs;
 use Drago\Localization\Translator;
 
 /**
@@ -19,14 +19,12 @@ use Drago\Localization\Translator;
 abstract class Presenter extends Nette\Application\UI\Presenter
 {
 	/**
-	 * Application language.
 	 * @var string
 	 * @persistent
 	 */
 	public $lang;
 
 	/**
-	 * Directory structure.
 	 * @var Dirs
 	 * @inject
 	 */
@@ -42,12 +40,11 @@ abstract class Presenter extends Nette\Application\UI\Presenter
 	 * Transmission and processing of translation file.
 	 * @param  string
 	 * @return Translator
-	 * @throws \Exception
 	 */
-	public function translator($module)
+	public function translator($path)
 	{
-		$path = $this->dirs->getModulesDir() . '/' . $module . '/locales/' . $this->lang . '.ini';
-		return new Translator($path);
+		$file = $this->dirs->getAppDir() . '/modules/' . $path . '/locales/' . $this->lang . '.ini';
+		return new Translator($file);
 	}
 
 	/**
