@@ -13,7 +13,7 @@ In addition, some methods are abbreviated. Here you can see how it looks such a 
 
 
 ## Flash messages
-Tips for a flash message we have defined in this class: [Drago\Flash.php]
+Tips for a flash message we have defined in this class: [Drago\Application\UI\Flash.php]
 (https://github.com/drago-fw/drago/blob/master/src/Drago/Application/UI/Flash.php).
 
 
@@ -30,12 +30,12 @@ Furthermore, the presenter located parameter language:
 public $lang;
 ```
 
-Easier access to individual directories [Dirs](https://github.com/drago-fw/dirs)
+Easier access to individual directories [Drago\Directory\Dirs.php](https://github.com/drago-fw/dirs)
 ```php
 public $dirs;
 ```
 
-Translation application is used [Translator](https://github.com/drago-fw/translator)
+Translation application is used [Drago\Localization\Translator.php](https://github.com/drago-fw/translator)
 ```php
 $this->translator($module);
 ```
