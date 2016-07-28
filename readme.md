@@ -11,14 +11,12 @@ in front of the file name, the higher the number, the higher the priority.
 The boot file (usually bootstrap), use this command:
 ```php
 // To scan multiple folders, use the array.
-$app->addFindConfig(__DIR__ . '/directory'); // or use array
+$app->addFindConfig(__DIR__ . '/directory');
 ```
-
 
 ## Flash messages
 Tips for a flash message we have defined in this class: [Drago\Application\UI\Flash.php]
 (https://github.com/drago-fw/drago/blob/master/src/Drago/Application/UI/Flash.php).
-
 
 ## Presenter
 Flash messages are already pre-defined in the Presenter:
