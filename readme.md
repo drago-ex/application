@@ -3,13 +3,16 @@ Simple Framework for small applications based on Nette Framework.
 
 ## Configurator
 Nette Configurator compared with the Dragon Configurator file is extended by an automatic
-search configuration files (* .neon). Found configuration files are stored in the cache.
+search configuration files (*.neon). Found configuration files are stored in the cache.
 
 If necessary, we can set the configuration file priority. Priority is set to put the number
 in front of the file name, the higher the number, the higher the priority.
 
-In addition, some methods are abbreviated. Here you can see how it looks such a setup
-[bootstrapper](https://github.com/drago-fw/skeleton/blob/master/app/booter.php).
+The boot file (usually bootstrap), use this command:
+```php
+// To scan multiple folders, use the array.
+$app->addFindConfig(__DIR__ . '/directory'); // or use array
+```
 
 
 ## Flash messages
