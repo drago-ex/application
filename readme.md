@@ -35,7 +35,9 @@ Easier access to individual directories [Drago\Directory\Dirs.php](https://githu
 public $dirs;
 ```
 
-**Other**: Method for delete files or directories:
+**Other**
+
+Method for delete files or directories:
 ```php
 $this->deleteThis($path);
 ```
