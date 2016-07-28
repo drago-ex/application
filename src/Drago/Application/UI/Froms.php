@@ -17,7 +17,7 @@ class Forms extends Nette\Object
 {
 	/**
 	 * Form factory.
-	 * @param  Translator adapter
+	 * @param  Translator
 	 * @return Form
 	 */
 	public function create($translator = NULL)
