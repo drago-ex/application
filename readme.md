@@ -35,11 +35,6 @@ Easier access to individual directories [Drago\Directory\Dirs.php](https://githu
 public $dirs;
 ```
 
-Translation application is used [Drago\Localization\Translator.php](https://github.com/drago-fw/translator)
-```php
-$this->translator($module);
-```
-
 **Other**: Method for delete files or directories:
 ```php
 $this->deleteThis($path);
