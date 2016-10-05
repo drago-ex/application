@@ -13,8 +13,10 @@ use Nette\Application\UI\Form;
  * This factory is designed for creating forms.
  * @author Zdeněk Papučík
  */
-class Forms extends Nette\Object
+class Forms
 {
+	use Nette\SmartObject;
+
 	/**
 	 * Form factory.
 	 * @param  Translator
