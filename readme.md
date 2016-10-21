@@ -35,13 +35,13 @@ $this->messageInfo($message);
 Furthermore, the presenter located parameter language:
 
 ```php
-public $lang;
+$this->lang
 ```
 
 Easier access to individual directories [Drago\Directory\Dirs.php](https://github.com/drago-fw/dirs)
 
 ```php
-public $dirs;
+$this->dirs
 ```
 
 **Other**
