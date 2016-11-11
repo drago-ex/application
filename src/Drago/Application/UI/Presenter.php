@@ -8,7 +8,7 @@ namespace Drago\Application\UI;
 
 use Nette;
 use Nette\Utils;
-use Drago\Directory\Dirs
+use Drago\Directory\Dirs;
 
 /**
  * Drago presenter.
