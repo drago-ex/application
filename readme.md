@@ -1,6 +1,6 @@
 ## Drago
 
-Extension for Nette Framework
+Extending Nette Framework
 
 ## Configurator
 
