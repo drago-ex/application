@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Drago, Extending Nette Framework
+ * Drago, extending Nette Framework
  * Copyright (c) 2015, Zdeněk Papučík
  */
 namespace Drago;
@@ -95,7 +95,7 @@ class Configurator extends Nette\Configurator
 	public function run()
 	{
 		return $this->createContainer()
-			->getByType('Nette\Application\Application')
+			->getByType('Nette\Application\Application::class')
 			->run();
 	}
 
