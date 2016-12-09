@@ -1,5 +1,5 @@
 {
-	"name": "drago-fw/drago",
+	"name": "drago-ex/drago",
 	"type": "library",
 	"description": "Drago, extending Nette Framework",
 	"license": ["MIT"],
