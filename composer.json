@@ -19,6 +19,9 @@
 	"require-dev": {
 		"drago-ex/dirs": "dev-master"
 	},
+	"replace": {
+		"drago-fw/drago": "*"
+	},
 	"autoload": {
 		"classmap": ["src/"]
 	}
