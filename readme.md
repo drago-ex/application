@@ -1,10 +1,10 @@
-## Drago Framework
+## Drago Extension
 
-Simple Framework for small applications based on Nette Framework.
+Extending over Nette Framework.
 
 ## Configurator
 
-Nette Configurator compared with the Dragon Configurator file is extended by an automatic
+Nette Configurator compared with the Drago Configurator file is extended by an automatic
 search configuration files (*.neon). Found configuration files are stored in the cache.
 
 If necessary, we can set the configuration file priority. Priority is set to put the number
