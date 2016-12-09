@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Drago, Extending Nette Framework
+ * Drago, extending Nette Framework
  * Copyright (c) 2015, Zdeněk Papučík
  */
 namespace Drago\Application\UI;
