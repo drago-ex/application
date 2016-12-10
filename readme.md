@@ -27,9 +27,9 @@ Tips for a flash message we have defined in this class: [Drago\Application\UI\Fl
 Flash messages are already pre-defined in the Presenter:
 
 ```php
-$this->messageSuccess($message);
-$this->messageWarning($message);
-$this->messageInfo($message);
+$this->messageSuccess('Success message.');
+$this->messageWarning('Warning message.');
+$this->messageInfo('Info message.');
 ```
 
 Furthermore, the presenter located parameter language:
