@@ -95,7 +95,7 @@ class Configurator extends Nette\Configurator
 	public function run()
 	{
 		return $this->createContainer()
-			->getByType('Nette\Application\Application::class')
+			->getByType(Nette\Application\Application::class)
 			->run();
 	}
 
