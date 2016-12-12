@@ -17,7 +17,7 @@
 		"drago-ex/dirs": "dev-master"
 	},
 	"replace": {
-		"drago-fw/drago": "*"
+		"drago-fw/drago": "self.version"
 	},
 	"autoload": {
 		"classmap": ["src/"]
