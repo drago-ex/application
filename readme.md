@@ -38,8 +38,6 @@ Furthermore, the presenter located parameter language:
 $this->lang
 ```
 
-Easier access to individual directories [Drago\Directory\Dirs.php](https://github.com/drago-fw/dirs)
-
 **Other**
 
 Method for delete files or directories:
