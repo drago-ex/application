@@ -23,9 +23,6 @@ class Configurator extends Nette\Configurator
 	{
 		parent::__construct();
 		$this->parameters = $this->parameters();
-		$this->defaultExtensions += [
-			'dirs' => 'Drago\Directory\DirsExtension'
-		];
 	}
 
 	/**
