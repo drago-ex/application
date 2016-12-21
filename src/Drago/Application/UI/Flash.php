@@ -13,7 +13,7 @@ use Nette;
  */
 class Flash
 {
-	use Nette\SmartObject;
+	use Nette\StaticClass;
 	const
 		Warning = 'warning',
 		Success = 'success',
