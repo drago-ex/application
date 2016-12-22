@@ -20,8 +20,7 @@ $app->addFindConfig(__DIR__ . '/directory');
 ## Flash messages
 
 Tips for a flash message we have defined in this class: [Drago\Application\UI\Flash.php]
-(https://github.com/drago-fw/drago/blob/master/src/Drago/Application/UI/Flash.php)
-
+(https://github.com/drago-fw/drago/blob/master/src/Drago/Application/UI/Flash.php).
 Flash messages are already pre-defined in the Drago Presenter:
 
 ```php
