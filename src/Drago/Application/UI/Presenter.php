@@ -16,18 +16,6 @@ use Nette\Utils;
 abstract class Presenter extends Nette\Application\UI\Presenter
 {
 	/**
-	 * @var string
-	 * @persistent
-	 */
-	public $lang;
-
-	// Setup rendering.
-	protected function beforeRender()
-	{
-		$this->template->lang = $this->lang;
-	}
-
-	/**
 	 * Delete files or directories.
 	 * @param  string
 	 * @return void
