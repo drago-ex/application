@@ -29,18 +29,6 @@ $this->messageWarning('Warning message');
 $this->messageInfo('Info message');
 ```
 
-## Parameter language
-
-In Drago Presenter is ready language parameter:
-
-```php
-/**
- * @var string
- * @persistent
- */
-public $lang;
-```
-
 **Other**
 
 Method for delete files or directories:
