@@ -19,9 +19,9 @@ $app->addFindConfig(__DIR__ . '/directory');
 
 ## Flash messages
 
-Determining type of a flash message is prepared in this class: [Drago\Application\UI\Flash.php]
+Determining type of a flash message is prepared in this class [Drago\Application\UI\Flash.php]
 (https://github.com/drago-fw/drago/blob/master/src/Drago/Application/UI/Flash.php),
-the presenter is already built-in flash type messages:
+the Drago Presenter is already built-in flash type messages:
 
 ```php
 $this->messageSuccess('Success message');
@@ -29,7 +29,9 @@ $this->messageWarning('Warning message');
 $this->messageInfo('Info message');
 ```
 
-Furthermore, the presenter located parameter language:
+## Parameter language
+
+In Drago Presenter is ready language parameter:
 
 ```php
 $this->lang
