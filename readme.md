@@ -34,7 +34,11 @@ $this->messageInfo('Info message');
 In Drago Presenter is ready language parameter:
 
 ```php
-$this->lang
+	/**
+	 * @var string
+	 * @persistent
+	 */
+	public $lang;
 ```
 
 **Other**
