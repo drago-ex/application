@@ -1,7 +1,7 @@
 {
-	"name": "drago-ex/drago",
+	"name": "drago-ex/application",
 	"type": "library",
-	"description": "Drago, extending Nette Framework",
+	"description": "Basic methods.",
 	"license": ["MIT"],
 	"authors": [
 		{
@@ -11,10 +11,7 @@
 	],
 	"require": {
 		"php": ">=5.6.0",
-		"nette/nette": "~2.4.0"
-	},
-	"replace": {
-		"drago-fw/drago": "self.version"
+		"nette/application": "~2.4.0"
 	},
 	"autoload": {
 		"classmap": ["src/"]
