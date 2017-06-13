@@ -15,7 +15,7 @@ class Flash
 {
 	use Nette\StaticClass;
 	const
-		Warning = 'warning',
-		Success = 'success',
-		Info = 'info';
+		WARNING = 'warning',
+		SUCCESS = 'success',
+		INFO = 'info';
 }
