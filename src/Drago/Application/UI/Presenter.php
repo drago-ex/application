@@ -32,7 +32,7 @@ abstract class Presenter extends Nette\Application\UI\Presenter
 	 */
 	public function messageSuccess($message)
 	{
-		return $this->flashMessage($message, Flash::Success);
+		return $this->flashMessage($message, Flash::SUCCESS);
 	}
 
 	/**
@@ -42,7 +42,7 @@ abstract class Presenter extends Nette\Application\UI\Presenter
 	 */
 	public function messageWarning($message)
 	{
-		return $this->flashMessage($message, Flash::Warning);
+		return $this->flashMessage($message, Flash::WARNING);
 	}
 
 	/**
@@ -52,7 +52,7 @@ abstract class Presenter extends Nette\Application\UI\Presenter
 	 */
 	public function messageInfo($message)
 	{
-		return $this->flashMessage($message, Flash::Info);
+		return $this->flashMessage($message, Flash::INFO);
 	}
 
 }
