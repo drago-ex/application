@@ -7,7 +7,7 @@
 namespace Drago\Application\UI;
 
 use Nette;
-use Nette\Application\UI\Form;
+use Nette\Application\UI;
 
 /**
  * This factory is designed for creating forms.
@@ -24,7 +24,7 @@ class Forms
 	 */
 	public function create($translator = NULL)
 	{
-		return (new Form())->setTranslator($translator);
+		return (new UI\Form())->setTranslator($translator);
 	}
 
 }
