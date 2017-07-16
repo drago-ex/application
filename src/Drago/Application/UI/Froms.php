@@ -19,12 +19,11 @@ class Forms
 
 	/**
 	 * Form factory.
-	 * @param  Translator
-	 * @return Form
+	 * @return UI\Form
 	 */
-	public function create($translator = NULL)
+	public function create()
 	{
-		return (new UI\Form())->setTranslator($translator);
+		return new UI\Form;
 	}
 
 }
