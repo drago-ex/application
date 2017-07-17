@@ -16,7 +16,7 @@ use Nette\Utils;
 abstract class Presenter extends Nette\Application\UI\Presenter
 {
 	/**
-	 * Delete files or directories.
+	 * Delete file or directory.
 	 * @param  string
 	 * @return void
 	 */
