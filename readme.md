@@ -4,9 +4,7 @@
 
 Basic methods.
 
-## Flash messages
-
-Drago Presenter is already built-in flash type messages:
+## Pre-written flash message with type
 
 ```php
 $this->messageSuccess('Success message');
