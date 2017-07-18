@@ -11,9 +11,3 @@ $this->messageSuccess('Success message');
 $this->messageWarning('Warning message');
 $this->messageInfo('Info message');
 ```
-
-## Method for delete files or directories
-
-```php
-$this->deleteThis(__DIR__ . '/path');
-```
