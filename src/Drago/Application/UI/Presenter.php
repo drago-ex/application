@@ -5,9 +5,7 @@
  * Copyright (c) 2015, Zdeněk Papučík
  */
 namespace Drago\Application\UI;
-
 use Nette;
-use Nette\Utils;
 
 /**
  * Drago presenter.
@@ -15,16 +13,6 @@ use Nette\Utils;
  */
 abstract class Presenter extends Nette\Application\UI\Presenter
 {
-	/**
-	 * Delete file or directory.
-	 * @param  string
-	 * @return void
-	 */
-	public function deleteThis($path)
-	{
-		return Utils\FileSystem::delete($path);
-	}
-
 	/**
 	 * Success message for template.
 	 * @param  string
