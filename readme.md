@@ -7,7 +7,33 @@ Basic methods.
 ## Pre-written flash message with type
 
 ```php
+// Seccess message.
 $this->messageSuccess('Success message');
+```
+
+```php
+// Warning message.
 $this->messageWarning('Warning message');
+```
+
+```php
+// Info message.
 $this->messageInfo('Info message');
+```
+
+## Form factory
+
+Add the configuration file:
+
+```
+services:
+
+	# Form factory.
+	- Drago\Application\UI\Factory
+```
+
+## Usage
+
+```php
+$form = $this->factory->create();
 ```
