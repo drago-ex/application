@@ -5,7 +5,9 @@
  * Copyright (c) 2015, Zdeněk Papučík
  */
 namespace Drago\Application\UI;
+
 use Nette;
+use stdClass;
 
 /**
  * Drago presenter.
@@ -16,7 +18,7 @@ abstract class Presenter extends Nette\Application\UI\Presenter
 	/**
 	 * Success message for template.
 	 * @param  string
-	 * @return \stdClass
+	 * @return stdClass
 	 */
 	public function messageSuccess($message)
 	{
@@ -26,7 +28,7 @@ abstract class Presenter extends Nette\Application\UI\Presenter
 	/**
 	 * Warning message for template.
 	 * @param  string
-	 * @return \stdClass
+	 * @return stdClass
 	 */
 	public function messageWarning($message)
 	{
@@ -36,7 +38,7 @@ abstract class Presenter extends Nette\Application\UI\Presenter
 	/**
 	 * Info message for template.
 	 * @param  string
-	 * @return \stdClass
+	 * @return stdClass
 	 */
 	public function messageInfo($message)
 	{
