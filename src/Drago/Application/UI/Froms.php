@@ -13,12 +13,11 @@ use Nette\Application\UI;
  * This factory is designed for creating forms.
  * @author Zdeněk Papučík
  */
-class Forms
+class Factory
 {
 	use Nette\SmartObject;
 
 	/**
-	 * Form factory.
 	 * @return UI\Form
 	 */
 	public function create()
