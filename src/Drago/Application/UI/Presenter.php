@@ -17,7 +17,7 @@ abstract class Presenter extends Nette\Application\UI\Presenter
 {
 	/**
 	 * Success message for template.
-	 * @param  string
+	 * @param string
 	 * @return stdClass
 	 */
 	public function messageSuccess($message)
@@ -27,7 +27,7 @@ abstract class Presenter extends Nette\Application\UI\Presenter
 
 	/**
 	 * Warning message for template.
-	 * @param  string
+	 * @param string
 	 * @return stdClass
 	 */
 	public function messageWarning($message)
@@ -37,7 +37,7 @@ abstract class Presenter extends Nette\Application\UI\Presenter
 
 	/**
 	 * Info message for template.
-	 * @param  string
+	 * @param string
 	 * @return stdClass
 	 */
 	public function messageInfo($message)
