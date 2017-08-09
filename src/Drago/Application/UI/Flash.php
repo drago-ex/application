@@ -9,7 +9,6 @@ use Nette;
 
 /**
  * Flash messages that we want to distinguish from their importance.
- * @author Zdeněk Papučík
  */
 class Flash
 {
