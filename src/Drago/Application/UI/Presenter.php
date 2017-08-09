@@ -11,7 +11,6 @@ use stdClass;
 
 /**
  * Drago presenter.
- * @author Zdeněk Papučík
  */
 abstract class Presenter extends Nette\Application\UI\Presenter
 {
