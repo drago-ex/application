@@ -11,7 +11,6 @@ use Nette\Application\UI;
 
 /**
  * This factory is designed for creating forms.
- * @author Zdeněk Papučík
  */
 class Factory
 {
