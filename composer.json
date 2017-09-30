@@ -1,7 +1,7 @@
 {
 	"name": "drago-ex/application",
 	"type": "library",
-	"description": "Basic methods.",
+	"description": "Základní metody.",
 	"license": ["MIT"],
 	"authors": [
 		{
