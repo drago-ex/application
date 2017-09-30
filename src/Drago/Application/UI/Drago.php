@@ -5,14 +5,12 @@
  * Copyright (c) 2015, Zdeněk Papučík
  */
 namespace Drago\Application\UI;
-
-use Nette;
 use stdClass;
 
 /**
- * Drago presenter.
+ * Základní metody pro presenter.
  */
-abstract class Presenter extends Nette\Application\UI\Presenter
+trait Drago
 {
 	/**
 	 * Zpráva, která se šabloně předá jako success.
