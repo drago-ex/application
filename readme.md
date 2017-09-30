@@ -8,17 +8,17 @@ Základní metody.
 
 ```php
 // Zpráva, která se šabloně předá jako success.
-$this->flashMessageSuccess('Zpráva byla přidána.');
+$this->flashMessageSuccess();
 ```
 
 ```php
 // Zpráva, která se šabloně předá jako info.
-$this->flashMessageInfo('Zpráva byla odstraněna.);
+$this->flashMessageInfo();
 ```
 
 ```php
 // Zpráva, která se šabloně předá jako warning.
-$this->flashMessageWarning('Zprávu nelze odstranit.');
+$this->flashMessageWarning();
 ```
 
 ## Registrace služby pro vytváření formulářů
