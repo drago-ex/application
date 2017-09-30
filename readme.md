@@ -7,17 +7,17 @@ Základní metody.
 ## Předpřipravené flash messages
 
 ```php
-// Zpráva reprezentuje úspěšnost.
+// Zpráva, která se šabloně předá jako success.
 $this->flashMessageSuccess('Zpráva byla přidána.');
 ```
 
 ```php
-// Zpráva reprezentuje informaci.
+// Zpráva, která se šabloně předá jako info.
 $this->flashMessageInfo('Zpráva byla odstraněna.);
 ```
 
 ```php
-// Zpráva reprezentuje upozornění.
+// Zpráva, která se šabloně předá jako warning.
 $this->flashMessageWarning('Zprávu nelze odstranit.');
 ```
 
