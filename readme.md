@@ -21,7 +21,7 @@ $this->flashMessageInfo('Zpráva byla odstraněna.);
 $this->flashMessageWarning('Zprávu nelze odstranit.');
 ```
 
-## Registrace továrničky pro vytváření formulářů
+## Registrace služby pro vytváření formulářů
 
 ```
 services:
