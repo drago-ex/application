@@ -1,20 +1,21 @@
 <?php
 
 /**
- * Extending for Nette Framework
+ * Drago Application
  * Copyright (c) 2015, Zdeněk Papučík
  */
 namespace Drago\Application\UI;
 use Nette;
 
 /**
- * Flash messages that we want to distinguish from their importance.
+ * Typy pro flash messages, které chceme odlišit od jejich významu
+ * a patřičně odlišit dle kaskádových stylů.
  */
 class Flash
 {
 	use Nette\StaticClass;
 	const
-		WARNING = 'warning',
 		SUCCESS = 'success',
+		WARNING = 'warning',
 		INFO = 'info';
 }

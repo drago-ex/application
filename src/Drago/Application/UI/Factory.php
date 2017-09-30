@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Extending for Nette Framework
+ * Drago Application
  * Copyright (c) 2015, Zdeněk Papučík
  */
 namespace Drago\Application\UI;
@@ -10,7 +10,7 @@ use Nette;
 use Nette\Application\UI;
 
 /**
- * This factory is designed for creating forms.
+ * Továrnička pro vytváření formulářů.
  */
 class Factory
 {

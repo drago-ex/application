@@ -2,37 +2,35 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/fb5139b3536247539dad485b2ca12361)](https://www.codacy.com/app/accgit/application?utm_source=github.com&utm_medium=referral&utm_content=drago-ex/application&utm_campaign=badger)
 
-Basic methods.
+Základní metody.
 
-## Pre-written flash message with type
+## Předpřipravené flash messages
 
 ```php
-// Seccess message.
-$this->messageSuccess('Success message');
+// Zpráva reprezentuje úspěšnost.
+$this->flashMessageSuccess('Zpráva byla přidána.');
 ```
 
 ```php
-// Warning message.
-$this->messageWarning('Warning message');
+// Zpráva reprezentuje informaci.
+$this->flashMessageInfo('Zpráva byla odstraněna.);
 ```
 
 ```php
-// Info message.
-$this->messageInfo('Info message');
+// Zpráva reprezentuje upozornění.
+$this->flashMessageWarning('Zprávu nelze odstranit.');
 ```
 
-## Form factory
-
-Add the configuration file:
+## Registrace továrničky pro vytváření formulářů
 
 ```
 services:
 
-	# Form factory.
+	# Továrnička pro vytváření formulářů.
 	- Drago\Application\UI\Factory
 ```
 
-## Usage
+## Továrničku pak použijeme následovně
 
 ```php
 $form = $this->factory->create();

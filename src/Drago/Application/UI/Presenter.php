@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Extending for Nette Framework
+ * Drago Application
  * Copyright (c) 2015, Zdeněk Papučík
  */
 namespace Drago\Application\UI;
@@ -15,33 +15,33 @@ use stdClass;
 abstract class Presenter extends Nette\Application\UI\Presenter
 {
 	/**
-	 * Success message for template.
+	 * Zpráva reprezentuje úspěšnost.
 	 * @param string
 	 * @return stdClass
 	 */
-	public function messageSuccess($message)
+	public function flashMessageSuccess($message)
 	{
 		return $this->flashMessage($message, Flash::SUCCESS);
 	}
 
 	/**
-	 * Warning message for template.
+	 * Zpráva reprezentuje informaci.
 	 * @param string
 	 * @return stdClass
 	 */
-	public function messageWarning($message)
+	public function flashMessageInfo($message)
 	{
-		return $this->flashMessage($message, Flash::WARNING);
+		return $this->flashMessage($message, Flash::INFO);
 	}
 
 	/**
-	 * Info message for template.
+	 * Zpráva reprezentuje upozornění.
 	 * @param string
 	 * @return stdClass
 	 */
-	public function messageInfo($message)
+	public function flashMessageWarning($message)
 	{
-		return $this->flashMessage($message, Flash::INFO);
+		return $this->flashMessage($message, Flash::WARNING);
 	}
 
 }
