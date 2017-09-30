@@ -15,7 +15,7 @@ use stdClass;
 abstract class Presenter extends Nette\Application\UI\Presenter
 {
 	/**
-	 * Zpráva reprezentuje úspěšnost.
+	 * Zpráva, která se šabloně předá jako success.
 	 * @param string
 	 * @return stdClass
 	 */
@@ -25,7 +25,7 @@ abstract class Presenter extends Nette\Application\UI\Presenter
 	}
 
 	/**
-	 * Zpráva reprezentuje informaci.
+	 * Zpráva, která se šabloně předá jako info.
 	 * @param string
 	 * @return stdClass
 	 */
@@ -35,7 +35,7 @@ abstract class Presenter extends Nette\Application\UI\Presenter
 	}
 
 	/**
-	 * Zpráva reprezentuje upozornění.
+	 * Zpráva, která se šabloně předá jako warning.
 	 * @param string
 	 * @return stdClass
 	 */
