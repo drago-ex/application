@@ -4,7 +4,20 @@
 
 Základní metody pro presentery.
 
-## Vložení traity do presenteru
+## Požadavky
+
+- PHP 7.0.8 nebo vyšší
+- composer
+
+## Instalace
+
+```
+composer require drago-ex/application
+```
+
+## Jak začít
+
+Níže uvedenou traitu vložíme do base presenteru.
 
 ```php
 use Drago\Application\UI\Drago;
