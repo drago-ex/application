@@ -1,7 +1,7 @@
 {
 	"name": "drago-ex/application",
 	"type": "library",
-	"description": "Základní metody pro presentery.",
+	"description": "Basic methods for the presenter and components.",
 	"license": ["MIT"],
 	"authors": [
 		{
