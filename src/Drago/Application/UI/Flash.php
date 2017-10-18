@@ -8,7 +8,7 @@ namespace Drago\Application\UI;
 use Nette;
 
 /**
- * Typy pro flash messages, které chceme odlišit od jejich významu.
+ * Types of flash messages that we want to distinguish from their meaning.
  */
 class Flash
 {

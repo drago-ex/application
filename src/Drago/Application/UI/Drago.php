@@ -8,12 +8,12 @@ namespace Drago\Application\UI;
 use stdClass;
 
 /**
- * Základní metody pro presenter.
+ * Basic methods for the presenter.
  */
 trait Drago
 {
 	/**
-	 * Zpráva, která se šabloně předá jako success.
+	 * Flash message with success type.
 	 * @param string
 	 * @return stdClass
 	 */
@@ -23,7 +23,7 @@ trait Drago
 	}
 
 	/**
-	 * Zpráva, která se šabloně předá jako info.
+	 * Flash message with type info.
 	 * @param string
 	 * @return stdClass
 	 */
@@ -33,7 +33,7 @@ trait Drago
 	}
 
 	/**
-	 * Zpráva, která se šabloně předá jako warning.
+	 * Flash message with warning type.
 	 * @param string
 	 * @return stdClass
 	 */

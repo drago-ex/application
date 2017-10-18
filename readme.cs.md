@@ -2,54 +2,54 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/fb5139b3536247539dad485b2ca12361)](https://www.codacy.com/app/accgit/application?utm_source=github.com&utm_medium=referral&utm_content=drago-ex/application&utm_campaign=badger)
 
-Basic methods for the presenter and components.
+Základní metody pro presentery a komponenty.
 
-## Requirements
+## Požadavky
 
-- PHP 7.0.8 or higher
+- PHP 7.0.8 nebo vyšší
 - composer
 
-## Installation
+## Instalace
 
 ```
 composer require drago-ex/application
 ```
 
-## How to begin
+## Jak začít
 
-Put the trait below into the presenter base.
+Níže uvedenou traitu vložíme do base presenteru.
 
 ```php
 use Drago\Application\UI\Drago;
 ```
 
-## Flash messages with a preset type
+## Zprávy s přednastaveným typem
 
 ```php
-// Flash message with success type.
+// Zpráva s přednastaveným typem success.
 $this->flashMessageSuccess('success...');
 ```
 
 ```php
-// Flash message with type info.
+// Zpráva s přednastaveným typem info.
 $this->flashMessageInfo('info...');
 ```
 
 ```php
-// Flash message with warning type.
+// Zpráva s přednastaveným typem warning.
 $this->flashMessageWarning('warning...');
 ```
 
-## Register a form creation service
+## Registrace služby pro vytváření formulářů
 
 ```
 services:
 
-	# Form factory.
+	# Továrnička pro formuláře.
 	- Drago\Application\UI\Factory
 ```
 
-## An example of how to use a factory
+## Ukázka, jak používat továrničku
 
 ```php
 $form = $this->factory->create();

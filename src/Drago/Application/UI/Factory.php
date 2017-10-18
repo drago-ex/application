@@ -10,7 +10,7 @@ use Nette;
 use Nette\Application\UI;
 
 /**
- * Továrnička pro vytváření formulářů.
+ * Form factory.
  */
 class Factory
 {
