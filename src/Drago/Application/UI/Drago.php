@@ -1,5 +1,8 @@
 <?php
 
+// Enable strict mode.
+declare(strict_types = 1);
+
 /**
  * Drago Application
  * Copyright (c) 2015, Zdeněk Papučík
@@ -14,32 +17,28 @@ trait Drago
 {
 	/**
 	 * Flash message with success type.
-	 * @param string
-	 * @return stdClass
 	 */
-	public function flashMessageSuccess($message)
+	public function flashMessageSuccess(string $message): stdClass
 	{
-		return $this->flashMessage($message, Flash::SUCCESS);
+		return $this->flashMessage($message, FlashType::SUCCESS);
 	}
+
 
 	/**
 	 * Flash message with type info.
-	 * @param string
-	 * @return stdClass
 	 */
-	public function flashMessageInfo($message)
+	public function flashMessageInfo(string $message): stdClass
 	{
-		return $this->flashMessage($message, Flash::INFO);
+		return $this->flashMessage($message, FlashType::INFO);
 	}
+
 
 	/**
 	 * Flash message with warning type.
-	 * @param string
-	 * @return stdClass
 	 */
-	public function flashMessageWarning($message)
+	public function flashMessageWarning(string $message): stdClass
 	{
-		return $this->flashMessage($message, Flash::WARNING);
+		return $this->flashMessage($message, FlashType::WARNING);
 	}
 
 }

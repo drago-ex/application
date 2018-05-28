@@ -6,7 +6,7 @@ Basic methods for the presenter and components.
 
 ## Requirements
 
-- PHP 7.0.8 or higher
+- PHP 7.1 or higher
 - composer
 
 ## Installation
@@ -17,7 +17,7 @@ composer require drago-ex/application
 
 ## How to begin
 
-Put the trait below into the presenter base.
+Put the trait below into the presenter.
 
 ```php
 use Drago\Application\UI\Drago;
@@ -40,13 +40,10 @@ $this->flashMessageInfo('info...');
 $this->flashMessageWarning('warning...');
 ```
 
-## Register a form creation service
+## We use a trait for creating factories in a presenter or component
 
-```
-services:
-
-	# Form factory.
-	- Drago\Application\UI\Factory
+```php
+use Drago\Application\UI\Factory;
 ```
 
 ## An example of how to use a factory

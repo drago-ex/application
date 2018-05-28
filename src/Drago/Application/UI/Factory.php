@@ -1,25 +1,21 @@
 <?php
 
+// Enable strict mode.
+declare(strict_types = 1);
+
 /**
  * Drago Application
  * Copyright (c) 2015, Zdeněk Papučík
  */
 namespace Drago\Application\UI;
-
-use Nette;
 use Nette\Application\UI;
 
 /**
- * Form factory.
+ * Creating factories.
  */
-class Factory
+trait Factory
 {
-	use Nette\SmartObject;
-
-	/**
-	 * @return UI\Form
-	 */
-	public function create()
+	public function create(): UI\Form
 	{
 		return new UI\Form;
 	}
