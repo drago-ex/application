@@ -23,7 +23,6 @@ trait Drago
 		return $this->flashMessage($message, FlashType::SUCCESS);
 	}
 
-
 	/**
 	 * Flash message with type info.
 	 */
@@ -31,7 +30,6 @@ trait Drago
 	{
 		return $this->flashMessage($message, FlashType::INFO);
 	}
-
 
 	/**
 	 * Flash message with warning type.

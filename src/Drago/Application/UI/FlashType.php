@@ -17,7 +17,9 @@ class FlashType
 {
 	use Nette\StaticClass;
 
-	// Types for flash messages.
+	/**
+	 * Types for flash messages.
+	 */
 	public const
 		SUCCESS = 'success',
 		WARNING = 'warning',
