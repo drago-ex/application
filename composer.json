@@ -11,9 +11,10 @@
 	],
 	"require": {
 		"php": ">=7.1",
-		"nette/application": "^2.4"
+		"nette/application": "^3.0"
 	},
 	"autoload": {
 		"classmap": ["src/"]
-	}
+	},
+	"minimum-stability": "dev"
 }
