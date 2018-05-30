@@ -13,7 +13,7 @@ use Nette\Application\UI;
 trait Factory
 {
 	/**
-	 * @return Application\UI\Form
+	 * @return UI\Form
 	 */
 	public function createForm()
 	{
