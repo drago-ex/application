@@ -15,7 +15,7 @@ trait Factory
 	/**
 	 * @return Application\UI\Form
 	 */
-	public function create()
+	public function createForm()
 	{
 		return new UI\Form;
 	}
