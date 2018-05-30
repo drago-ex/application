@@ -1,8 +1,5 @@
 <?php
 
-// Enable strict mode.
-declare(strict_types = 1);
-
 /**
  * Drago Application
  * Copyright (c) 2015, Zdeněk Papučík
@@ -15,7 +12,10 @@ use Nette\Application\UI;
  */
 trait Factory
 {
-	public function create(): UI\Form
+	/**
+	 * @return Application\UI\Form
+	 */
+	public function create()
 	{
 		return new UI\Form;
 	}

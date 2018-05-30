@@ -1,8 +1,5 @@
 <?php
 
-// Enable strict mode.
-declare(strict_types = 1);
-
 /**
  * Drago Application
  * Copyright (c) 2015, Zdeněk Papučík
@@ -20,7 +17,7 @@ class FlashType
 	/**
 	 * Types for flash messages.
 	 */
-	public const
+	const
 		SUCCESS = 'success',
 		WARNING = 'warning',
 		INFO = 'info';
