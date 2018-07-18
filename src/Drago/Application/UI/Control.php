@@ -24,7 +24,7 @@ class Control extends UI\Control
 	{
 		return $this->presenter->isAjax();
 	}
-	
+
 	/**
 	 * Returns pair signal receiver and name.
 	 * @return array|null
