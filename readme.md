@@ -15,37 +15,6 @@ Basic methods for the presenter and components.
 composer require drago-ex/application
 ```
 
-## How to begin
-
-Put the trait below into the presenter.
-
-```php
-use Drago\Application\UI\Drago;
-```
-
-## Flash messages with a preset type
-
-```php
-// Flash message with success type.
-$this->flashMessageSuccess('success...');
-```
-
-```php
-// Flash message with type info.
-$this->flashMessageInfo('info...');
-```
-
-```php
-// Flash message with warning type.
-$this->flashMessageWarning('warning...');
-```
-
-## We use a trait for creating factories in a presenter or component
-
-```php
-use Drago\Application\UI\Factory;
-```
-
 ## An example of how to use a factory
 
 ```php
