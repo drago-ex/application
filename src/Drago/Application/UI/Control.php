@@ -14,8 +14,6 @@ use stdClass;
  */
 class Control extends UI\Control
 {
-	use Drago;
-
 	/**
 	 * Is AJAX request?
 	 * @return bool
