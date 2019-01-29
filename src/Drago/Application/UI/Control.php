@@ -44,4 +44,14 @@ class Control extends UI\Control
 		return $this->presenter->flashMessage($message, $type);
 	}
 
+	/**
+	 * Forces control or its snippet to repaint.
+	 * @return void
+	 */
+	public function redrawControl($snippet = null, $redraw = true)
+	{
+		parent::redrawControl($snippet, $redraw);
+		return $this->presenter->redrawControl($snippet, $redraw);
+	}
+
 }
