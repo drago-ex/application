@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 /**
  * Drago Application
  * Copyright (c) 2015, Zdeněk Papučík
@@ -12,12 +14,8 @@ use Nette\Application\UI;
  */
 trait Factory
 {
-	/**
-	 * @return UI\Form
-	 */
-	public function createForm()
+	public function createForm(): UI\Form
 	{
 		return new UI\Form;
 	}
-
 }
