@@ -4,7 +4,7 @@ Basic methods for the presenter and components.
 
 ## Requirements
 
-- PHP 7.2 or higher
+- PHP 7.1 or higher
 - composer
 
 ## Installation
