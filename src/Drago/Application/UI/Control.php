@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 /**
  * Drago Application
  * Copyright (c) 2015, Zdeněk Papučík
@@ -16,42 +18,30 @@ class Control extends UI\Control
 {
 	/**
 	 * Is AJAX request?
-	 * @return bool
 	 */
-	public function isAjax()
+	public function isAjax(): bool
 	{
 		return $this->presenter->isAjax();
 	}
 
+
 	/**
 	 * Returns pair signal receiver and name.
-	 * @return array|null
 	 */
-	public function getSignal()
+	public function getSignal(): ?array
 	{
 		return $this->presenter->getSignal();
 	}
+
 
 	/**
 	 * Saves the message to template.
 	 * @param string $message
 	 * @param string $type
-	 * @return stdClass
 	 */
-	public function flashMessage($message, $type = 'info')
+	public function flashMessage($message, $type = 'info'): stdClass
 	{
 		parent::flashMessage($message, $type);
 		return $this->presenter->flashMessage($message, $type);
 	}
-
-	/**
-	 * Forces control or its snippet to repaint.
-	 * @return void
-	 */
-	public function redrawControl($snippet = null, $redraw = true)
-	{
-		parent::redrawControl($snippet, $redraw);
-		return $this->presenter->redrawControl($snippet, $redraw);
-	}
-
 }
