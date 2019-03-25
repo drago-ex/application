@@ -15,6 +15,8 @@ composer require drago-ex/application
 
 ## An example of how to use a factory
 
+Use Trait in the Class where you want to use the factory.
+
 ```php
 $form = $this->factory->create();
 ```
