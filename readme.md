@@ -18,5 +18,8 @@ composer require drago-ex/application
 Use Trait in the Class where you want to use the factory.
 
 ```php
+use Drago\Application\UI\Factory;
+
+// Create factory
 $form = $this->factory->create();
 ```
