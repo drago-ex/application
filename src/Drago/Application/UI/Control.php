@@ -36,10 +36,8 @@ class Control extends UI\Control
 
 	/**
 	 * Saves the message to template.
-	 * @param string $message
-	 * @param string $type
 	 */
-	public function flashMessage($message, $type = 'info'): stdClass
+	public function flashMessage($message, string $type = 'info'): stdClass
 	{
 		parent::flashMessage($message, $type);
 		return $this->presenter->flashMessage($message, $type);
