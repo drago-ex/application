@@ -22,4 +22,6 @@ use Drago\Application\UI\Factory;
 
 // Create factory
 $form = $this->factory->create();
+...
+return $form;
 ```
