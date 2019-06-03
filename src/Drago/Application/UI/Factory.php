@@ -1,14 +1,18 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types = 1);
 
 /**
  * Drago Application
- * Copyright (c) 2015, Zdeněk Papučík
+ * Package built on Nette Framework
  */
 namespace Drago\Application\UI;
+
 use Nette\Application\UI;
 
 /**
  * Creating factories.
+ * @package Drago\Application
  */
 trait Factory
 {
