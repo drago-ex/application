@@ -33,14 +33,4 @@ class Control extends UI\Control
 	{
 		return $this->presenter->getSignal();
 	}
-
-
-	/**
-	 * Saves the message to template.
-	 */
-	public function flashMessage($message, string $type = 'info'): stdClass
-	{
-		parent::flashMessage($message, $type);
-		return $this->presenter->flashMessage($message, $type);
-	}
 }
