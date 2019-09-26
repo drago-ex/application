@@ -8,17 +8,20 @@ declare(strict_types = 1);
  */
 namespace Drago\Application\UI;
 
-use Nette\Application\UI;
+use Nette\Application\UI\Form;
+use Nette\SmartObject;
 
 
 /**
  * Creating factories.
  * @package Drago\Application
  */
-trait Factory
+class Factory
 {
-	public function createForm(): UI\Form
+	use SmartObject;
+
+	public function create(): Form
 	{
-		return new UI\Form;
+		return new Form;
 	}
 }
