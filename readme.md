@@ -6,7 +6,6 @@
 <p align="center">Simple packages built on Nette Framework</p>
 
 ## Info
-
 Basic methods for the presenter and components.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://raw.githubusercontent.com/drago-ex/application/master/license.md)
@@ -14,23 +13,13 @@ Basic methods for the presenter and components.
 [![CodeFactor](https://www.codefactor.io/repository/github/drago-ex/application/badge)](https://www.codefactor.io/repository/github/drago-ex/application)
 
 ## Requirements
-
 - PHP 7.1 or higher
 - composer
 
 ## Installation
-
 ```
 composer require drago-ex/application
 ```
 
-## An example of how to use a factory
-
-Use Trait in the Class where you want to use the factory.
-
-```php
-use Drago\Application\UI\Factory;
-
-// Create factory
-$form = $this->factory->create();
-```
+## Documentation
+https://github.com/drago-ex/application/wiki/Documentation
