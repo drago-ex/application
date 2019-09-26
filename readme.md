@@ -10,6 +10,7 @@ Basic methods for the presenter and components.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://raw.githubusercontent.com/drago-ex/application/master/license.md)
 [![PHP version](https://badge.fury.io/ph/drago-ex%2Fapplication.svg)](https://badge.fury.io/ph/drago-ex%2Fapplication)
+[![Build Status](https://travis-ci.org/drago-ex/application.svg?branch=master)](https://travis-ci.org/drago-ex/application)
 [![CodeFactor](https://www.codefactor.io/repository/github/drago-ex/application/badge)](https://www.codefactor.io/repository/github/drago-ex/application)
 
 ## Requirements
