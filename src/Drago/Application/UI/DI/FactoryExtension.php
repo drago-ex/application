@@ -13,7 +13,6 @@ use Nette\DI\CompilerExtension;
 
 /**
  * Register service.
- * @package Drago\Application
  */
 class FactoryExtension extends CompilerExtension
 {
