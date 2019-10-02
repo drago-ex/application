@@ -14,7 +14,6 @@ use Nette\SmartObject;
 
 /**
  * Creating factories.
- * @package Drago\Application
  */
 class Factory
 {
