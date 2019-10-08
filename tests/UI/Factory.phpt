@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Test\Parameters;
+namespace Test\UI;
 
 use Drago;
 use Nette\Application\UI\Form;
