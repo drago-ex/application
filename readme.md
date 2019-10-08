@@ -12,6 +12,7 @@ Basic methods for the presenter and components.
 [![PHP version](https://badge.fury.io/ph/drago-ex%2Fapplication.svg)](https://badge.fury.io/ph/drago-ex%2Fapplication)
 [![Build Status](https://travis-ci.org/drago-ex/application.svg?branch=master)](https://travis-ci.org/drago-ex/application)
 [![CodeFactor](https://www.codefactor.io/repository/github/drago-ex/application/badge)](https://www.codefactor.io/repository/github/drago-ex/application)
+[![Coverage Status](https://coveralls.io/repos/github/drago-ex/application/badge.svg?branch=master)](https://coveralls.io/github/drago-ex/application?branch=master)
 
 ## Requirements
 - PHP 7.1 or higher
