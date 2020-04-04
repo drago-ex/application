@@ -2,8 +2,6 @@
 
 declare(strict_types = 1);
 
-namespace Test\UI;
-
 use Drago\Application\UI\Alert;
 use Tester\Assert;
 

@@ -10,7 +10,7 @@ declare(strict_types = 1);
 namespace Drago\Application\UI;
 
 use Nette\Application\UI\Form;
-use Nette\SmartObject;
+use Nette;
 
 
 /**
@@ -18,7 +18,7 @@ use Nette\SmartObject;
  */
 class Factory
 {
-	use SmartObject;
+	use Nette\SmartObject;
 
 	public function create(): Form
 	{
