@@ -9,19 +9,19 @@ declare(strict_types = 1);
 
 namespace Drago\Application\UI\DI;
 
-use Drago;
-use Nette;
+use Drago\Application\UI\Factory;
+use Nette\DI\CompilerExtension;
 
 
 /**
  * Register service.
  */
-class FactoryExtension extends Nette\DI\CompilerExtension
+class FactoryExtension extends CompilerExtension
 {
 	public function loadConfiguration(): void
 	{
 		$builder = $this->getContainerBuilder();
 		$builder->addDefinition($this->prefix('factory'))
-			->setFactory(Drago\Application\UI\Factory::class);
+			->setFactory(Factory::class);
 	}
 }

@@ -2,20 +2,23 @@
 
 declare(strict_types = 1);
 
+use Drago\Application\UI\DI\FactoryExtension;
 use Drago\Application\UI\Factory;
-use Nette\DI;
+use Nette\DI\Compiler;
+use Nette\DI\Container;
+use Nette\DI\ContainerLoader;
 use Tester\Assert;
 
 $container = require __DIR__ . '/../../bootstrap.php';
 
 
-class FactoryExtension extends TestContainer
+class TestFactoryExtension extends TestContainer
 {
-	private function createContainer(): DI\Container
+	private function createContainer(): Container
 	{
-		$loader = new DI\ContainerLoader(TEMP_DIR, true);
-		$class = $loader->load(function (DI\Compiler $compiler): void {
-			$compiler->addExtension('factory', new Drago\Application\UI\DI\FactoryExtension);
+		$loader = new ContainerLoader(TEMP_DIR, true);
+		$class = $loader->load(function (Compiler $compiler): void {
+			$compiler->addExtension('factory', new FactoryExtension());
 		});
 		return new $class;
 	}
@@ -28,5 +31,5 @@ class FactoryExtension extends TestContainer
 	}
 }
 
-$extension = new FactoryExtension($container);
+$extension = new TestFactoryExtension($container);
 $extension->run();
