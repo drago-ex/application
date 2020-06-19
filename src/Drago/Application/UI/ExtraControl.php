@@ -9,10 +9,13 @@ declare(strict_types = 1);
 
 namespace Drago\Application\UI;
 
-use Nette;
+use Nette\Application\UI\Control;
 
 
-class Control extends Nette\Application\UI\Control
+/**
+ * Extra control.
+ */
+class ExtraControl extends Control
 {
 	/**
 	 * Check if there is a pair signal receiver and name.
