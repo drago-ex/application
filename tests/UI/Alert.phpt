@@ -7,26 +7,26 @@ use Tester\Assert;
 
 require __DIR__ . '/../bootstrap.php';
 
-Assert::type(TYPE_STRING, Alert::PRIMARY);
+Assert::type('string', Alert::PRIMARY);
 Assert::same('primary', Alert::PRIMARY);
 
-Assert::type(TYPE_STRING, Alert::SECONDARY);
+Assert::type('string', Alert::SECONDARY);
 Assert::same('secondary', Alert::SECONDARY);
 
-Assert::type(TYPE_STRING, Alert::SUCCESS);
+Assert::type('string', Alert::SUCCESS);
 Assert::same('success', Alert::SUCCESS);
 
-Assert::type(TYPE_STRING, Alert::DANGER);
+Assert::type('string', Alert::DANGER);
 Assert::same('danger', Alert::DANGER);
 
-Assert::type(TYPE_STRING, Alert::WARNING);
+Assert::type('string', Alert::WARNING);
 Assert::same('warning', Alert::WARNING);
 
-Assert::type(TYPE_STRING, Alert::INFO);
+Assert::type('string', Alert::INFO);
 Assert::same('info', Alert::INFO);
 
-Assert::type(TYPE_STRING, Alert::LIGHT);
+Assert::type('string', Alert::LIGHT);
 Assert::same('light', Alert::LIGHT);
 
-Assert::type(TYPE_STRING, Alert::DARK);
+Assert::type('string', Alert::DARK);
 Assert::same('dark', Alert::DARK);
