@@ -1,7 +1,7 @@
 {
 	"name": "drago-ex/application",
 	"type": "library",
-	"description": "Basic methods for the presenter and components.",
+	"description": "Basic methods for Nette Framework",
 	"license": ["MIT"],
 	"authors": [
 		{
