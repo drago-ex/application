@@ -30,5 +30,12 @@ Check if there is a pair signal receiver and name.
 $this->getSignal();
 ```
 
+## Is AJAX request?
+
+Shorter method in control.
+```php
+$this->isAjax();
+```
+
 ## Flash message alert type
 - [Alert](https://github.com/drago-ex/application/blob/master/src/Drago/Application/UI/Alert.php)
