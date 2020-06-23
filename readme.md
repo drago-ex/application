@@ -6,7 +6,7 @@
 <p align="center">Simple packages built on Nette Framework</p>
 
 ## Drago Application
-Basic methods for the presenter and components.
+Basic methods.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://raw.githubusercontent.com/drago-ex/application/master/license.md)
 [![PHP version](https://badge.fury.io/ph/drago-ex%2Fapplication.svg)](https://badge.fury.io/ph/drago-ex%2Fapplication)
