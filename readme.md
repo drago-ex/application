@@ -22,3 +22,13 @@ Basic extensions.
 ```
 composer require drago-ex/application
 ```
+
+## Extra Control
+
+Check if there is a pair signal receiver and name.
+```php
+$this->getSignal();
+```
+
+## Flash message alert type
+- [Alert](https://github.com/drago-ex/application/blob/master/src/Drago/Application/UI/Alert.php)
