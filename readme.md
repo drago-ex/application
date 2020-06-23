@@ -5,7 +5,7 @@
 <h3 align="center">Drago Extension</h3>
 <p align="center">Simple packages built on Nette Framework</p>
 
-## Info
+## Drago Application
 Basic methods for the presenter and components.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://raw.githubusercontent.com/drago-ex/application/master/license.md)
@@ -14,14 +14,11 @@ Basic methods for the presenter and components.
 [![CodeFactor](https://www.codefactor.io/repository/github/drago-ex/application/badge)](https://www.codefactor.io/repository/github/drago-ex/application)
 [![Coverage Status](https://coveralls.io/repos/github/drago-ex/application/badge.svg?branch=master)](https://coveralls.io/github/drago-ex/application?branch=master)
 
-## Requirements
-- PHP 7.1 or higher
+## Technology
+- PHP 7.4 or higher
 - composer
 
 ## Installation
 ```
 composer require drago-ex/application
 ```
-
-## Documentation
-https://github.com/drago-ex/application/wiki/Documentation
