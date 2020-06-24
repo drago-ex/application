@@ -5,7 +5,7 @@
 <h3 align="center">Drago Extension</h3>
 <p align="center">Extension for Nette Framework</p>
 
-## Drago Application
+## Application
 Basic extensions.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://raw.githubusercontent.com/drago-ex/application/master/license.md)
