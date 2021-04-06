@@ -14,7 +14,7 @@ Basic extensions.
 [![CodeFactor](https://www.codefactor.io/repository/github/drago-ex/application/badge)](https://www.codefactor.io/repository/github/drago-ex/application)
 
 ## Technology
-- PHP 7.4 or higher
+- PHP 8.0 or higher
 - composer
 
 ## Installation
