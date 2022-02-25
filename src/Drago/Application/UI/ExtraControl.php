@@ -81,14 +81,10 @@ class ExtraControl extends Control
 	/**
 	 * Template render.
 	 */
-	public function setRenderControl(string $templateFile, ?Form $form = null, ?array $items = []): void
+	public function setRenderControl(string $templateFile, ?array $items = []): void
 	{
 		if ($this->template instanceof Template) {
 			$template = $this->template;
-
-			if ($form instanceof Form) {
-				$template->form = $form;
-			}
 
 			if (is_array($items)) {
 				foreach ($items as $key => $item) {
