@@ -22,7 +22,6 @@ use Nette\Localization\Translator;
 class ExtraControl extends Control
 {
 	public ?Translator $translator = null;
-	public Template $template;
 
 
 	public function setTranslator(Translator $translator): Translator
