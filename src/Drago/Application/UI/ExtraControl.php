@@ -35,7 +35,7 @@ class ExtraControl extends Control
 	 */
 	public function getSignal(): ?int
 	{
-		$signal = $this->presenter->getSignal();
+		$signal = $this->getPresenter()->getSignal();
 		return $signal && (in_array('edit', $signal, true)) ? 1 : null;
 	}
 
@@ -45,7 +45,7 @@ class ExtraControl extends Control
 	 */
 	public function isAjax(): bool
 	{
-		return $this->presenter->isAjax();
+		return $this->getPresenter()->isAjax();
 	}
 
 
@@ -54,7 +54,7 @@ class ExtraControl extends Control
 	 */
 	public function redrawPresenter(string $snippet = null, bool $redraw = true): void
 	{
-		$this->presenter->redrawControl($snippet, $redraw);
+		$this->getPresenter()->redrawControl($snippet, $redraw);
 	}
 
 
@@ -74,7 +74,7 @@ class ExtraControl extends Control
 	 */
 	public function flashMessagePresenter($message, string $type = 'info'): \stdClass
 	{
-		return $this->presenter->flashMessage($message, $type);
+		return $this->getPresenter()->flashMessage($message, $type);
 	}
 
 
@@ -83,12 +83,12 @@ class ExtraControl extends Control
 	 */
 	public function setRenderControl(string $templateFile, ?array $items = []): void
 	{
-		if ($this->template instanceof Template) {
-			$template = $this->template;
+		if ($this->getTemplate() instanceof Template) {
+			$template = $this->getTemplate();
 
 			if (is_array($items)) {
 				foreach ($items as $key => $item) {
-					$template->$key = $item;
+					$template->{$key} = $item;
 				}
 			}
 
