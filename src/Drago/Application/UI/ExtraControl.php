@@ -23,6 +23,12 @@ class ExtraControl extends Control
 {
 	public ?Translator $translator = null;
 
+	/** Path to the template */
+	public string $temlateFile;
+
+	/** Field with items. */
+	public array $items = [];
+
 
 	public function setTranslator(Translator $translator): Translator
 	{
