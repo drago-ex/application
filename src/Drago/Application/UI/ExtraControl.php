@@ -10,11 +10,9 @@ declare(strict_types=1);
 namespace Drago\Application\UI;
 
 use Nette\Application\UI\Control;
-use Nette\Application\UI\Form;
 use Nette\Bridges\ApplicationLatte\Template;
 use Nette\InvalidStateException;
 use Nette\Localization\Translator;
-use Tracy\Debugger;
 
 
 /**
