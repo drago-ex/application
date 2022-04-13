@@ -14,6 +14,7 @@ use Nette\Application\UI\Form;
 use Nette\Bridges\ApplicationLatte\Template;
 use Nette\InvalidStateException;
 use Nette\Localization\Translator;
+use Tracy\Debugger;
 
 
 /**
@@ -24,12 +25,12 @@ class ExtraControl extends Control
 	public ?Translator $translator = null;
 
 	/** Path to the template */
-	protected string $temlateFile;
-
-	/** Field with items. */
-	protected array $items = [];
+	protected string $templateFile;
 
 
+	/**
+	 * Translator adapter.
+	 */
 	public function setTranslator(Translator $translator): Translator
 	{
 		return $this->translator = $translator;
@@ -47,79 +48,23 @@ class ExtraControl extends Control
 
 
 	/**
-	 * Is AJAX request?
-	 */
-	public function isAjax(): bool
-	{
-		return $this->getPresenter()->isAjax();
-	}
-
-
-	/**
-	 * Forces control or its snippet to repaint.
-	 */
-	public function redrawPresenter(string $snippet = null, bool $redraw = true): void
-	{
-		$this->getPresenter()->redrawControl($snippet, $redraw);
-	}
-
-
-	/**
-	 * Multiple redraw snippet on presenter.
-	 */
-	public function multipleRedrawPresenter(array $snippets): void
-	{
-		foreach ($snippets as $snippet) {
-			$this->redrawPresenter($snippet);
-		}
-	}
-
-
-	/**
-	 * Saves the message to template, that can be displayed after redirect.
-	 */
-	public function flashMessagePresenter($message, string $type = 'info'): \stdClass
-	{
-		return $this->getPresenter()->flashMessage($message, $type);
-	}
-
-
-	/**
 	 * Template render.
 	 */
-	public function setRenderControl(string $templateFile, ?array $items = []): void
+	public function setRender(string $templateFile, array $items = []): void
 	{
-		if ($this->getTemplate() instanceof Template) {
-			$template = $this->getTemplate();
-
+		$template = $this->getTemplate();
+		if ($template instanceof Template) {
 			if (is_array($items)) {
 				foreach ($items as $key => $item) {
 					$template->{$key} = $item;
 				}
 			}
-
-			if ($this->translator instanceof Translator) {
-				$template->setTranslator($this->translator);
-			}
-
+			$template->setTranslator($this->translator);
 			$template->setFile($templateFile);
 			$template->render();
 
 		} else {
 			throw new InvalidStateException('Incorrect instance type.');
 		}
-	}
-
-
-	/**
-	 * Creating a factory.
-	 */
-	public function factory(): Form
-	{
-		$form = new Form;
-		if ($this->translator instanceof Translator) {
-			$form->setTranslator($this->translator);
-		}
-		return $form;
 	}
 }
