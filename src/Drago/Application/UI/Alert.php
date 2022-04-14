@@ -15,13 +15,8 @@ namespace Drago\Application\UI;
  */
 class Alert
 {
-	public const
-		PRIMARY = 'primary',
-		SECONDARY = 'secondary',
-		SUCCESS = 'success',
-		DANGER = 'danger',
-		WARNING = 'warning',
-		INFO = 'info',
-		LIGHT = 'light',
-		DARK = 'dark';
+	public const SUCCESS = 'success';
+	public const DANGER = 'danger';
+	public const WARNING = 'warning';
+	public const INFO = 'info';
 }
