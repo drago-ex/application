@@ -25,5 +25,4 @@ class ExtraTemplate extends Template
 	public User $user;
 	public string $baseUrl;
 	public string $basePath;
-	public array $flashes = [];
 }
