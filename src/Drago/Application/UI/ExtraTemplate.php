@@ -13,7 +13,6 @@ use Nette\Application\IPresenter;
 use Nette\Application\UI\Control;
 use Nette\Bridges\ApplicationLatte\Template;
 use Nette\Security\User;
-use stdClass;
 
 
 /**
