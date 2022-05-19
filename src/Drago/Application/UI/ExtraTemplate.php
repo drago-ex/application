@@ -13,6 +13,7 @@ use Nette\Application\UI\Control;
 use Nette\Application\UI\Presenter;
 use Nette\Bridges\ApplicationLatte\Template;
 use Nette\Security\User;
+use stdClass;
 
 
 /**
@@ -25,4 +26,7 @@ class ExtraTemplate extends Template
 	public User $user;
 	public string $baseUrl;
 	public string $basePath;
+
+	/** @var stdClass[] */
+	public array $flashes = [];
 }
