@@ -26,7 +26,4 @@ class ExtraTemplate extends Template
 	public User $user;
 	public string $baseUrl;
 	public string $basePath;
-
-	/** @var stdClass[] */
-	public array $flashes = [];
 }
