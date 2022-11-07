@@ -24,10 +24,10 @@ class ExtraControl extends Control
 	/**
 	 * Check if there is a pair signal receiver and name.
 	 */
-	public function getSignal(): ?int
+	public function getSignal(string $name = 'edit'): ?int
 	{
 		$signal = $this->getPresenter()->getSignal();
-		return $signal && (in_array('edit', $signal, true)) ? 1 : null;
+		return $signal && (in_array($name, $signal, true)) ? 1 : null;
 	}
 
 
