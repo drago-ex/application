@@ -11,8 +11,8 @@ namespace Drago\Application\UI;
 
 use Nette\Application\UI\Control;
 use Nette\Forms\Controls\BaseControl;
-use Nette\Localization\Translator;
 use Nette\Application\UI\Form;
+use Nette\Localization\Translator;
 
 
 /**
