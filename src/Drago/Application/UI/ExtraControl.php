@@ -10,8 +10,8 @@ declare(strict_types=1);
 namespace Drago\Application\UI;
 
 use Nette\Application\UI\Control;
-use Nette\Localization\Translator;
 use Nette\Forms\Controls\BaseControl;
+use Nette\Localization\Translator;
 
 
 /**
