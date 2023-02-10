@@ -11,6 +11,7 @@ namespace Drago\Application\UI;
 
 use Nette\Application\UI\Control;
 use Nette\Localization\Translator;
+use Nette\Forms\Controls\BaseControl;
 
 
 /**
@@ -37,5 +38,19 @@ class ExtraControl extends Control
 	public function isAjax(): bool
 	{
 		return $this->getPresenter()->isAjax();
+	}
+
+
+	/**
+	 * Implements the basic functionality common to form controls.
+	 */
+	public function getFormComponent(Form $form, string $component): ?BaseControl
+	{
+		$factory = null;
+		$form = $form[$component];
+		if ($form instanceof BaseControl) {
+			$factory = $form;
+		}
+		return $factory;
 	}
 }
