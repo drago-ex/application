@@ -17,7 +17,7 @@ composer require drago-ex/application
 
 ## Extra Control
 
-Check if there is a pair signal receiver and name.
+Check if there is a pair signal receiver and name (default is edit).
 ```php
 $this->getSignal();
 ```
