@@ -47,12 +47,8 @@ class ExtraControl extends Control
 	 */
 	public function getFormComponent(Form $form, string $component): ?BaseControl
 	{
-		$factory = null;
-		$form = $form[$component];
-		if ($form instanceof BaseControl) {
-			$factory = $form;
-		}
-		return $factory;
+		$factory = $form[$component];
+		return $factory instanceof BaseControl ? $factory : null;
 	}
 
 
