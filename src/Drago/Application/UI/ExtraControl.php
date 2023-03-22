@@ -54,4 +54,13 @@ class ExtraControl extends Control
 		}
 		return $factory;
 	}
+
+
+	/**
+	 * Returns a fully-qualified name that uniquely identifies the component within the presenter hierarchy.
+	 */
+	public function getUniqueIdComponent(string $name): string
+	{
+		return $this->getUniqueId() . $name;
+	}
 }
