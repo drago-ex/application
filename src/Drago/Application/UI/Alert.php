@@ -15,7 +15,7 @@ namespace Drago\Application\UI;
  */
 class Alert
 {
-	public const success = 'success';
+	public const Success = 'success';
 	public const Danger = 'danger';
 	public const Warning = 'warning';
 	public const Info = 'info';
