@@ -20,8 +20,6 @@ use Nette\Localization\Translator;
  */
 class ExtraControl extends Control
 {
-	public const Offcanvas = 'Offcanvas';
-	public const Modal = 'Modal';
 	public ?Translator $translator = null;
 
 
@@ -51,14 +49,5 @@ class ExtraControl extends Control
 	{
 		$factory = $form[$component];
 		return $factory instanceof BaseControl ? $factory : null;
-	}
-
-
-	/**
-	 * Returns a fully-qualified name that uniquely identifies the component within the presenter hierarchy.
-	 */
-	public function getUniqueIdComponent(string $name): string
-	{
-		return $this->getUniqueId() . $name;
 	}
 }
