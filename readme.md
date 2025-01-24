@@ -43,7 +43,8 @@ It is used in the bow of presenters or control
 class Presenter {}
 ```
 
-In Latte, we will use these macros to insert into the template, which will tell us the variables and types that can be used by default in the template
+In Latte, we will use these macros to insert into the template, which will tell us the
+variables and types that can be used by default in the template.
 ```latte
 {templateType Drago\Application\UI\ExtraTemplate}
 {varType Drago\Application\UI\Flashes[] $flashes}
