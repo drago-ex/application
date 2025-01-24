@@ -34,7 +34,7 @@ $submitButton = $this->getFormComponent($form, 'submit');
 $submitButton->setCaption('Edit');
 ```
 
-## Base template class extending Nette's Template.
+## Base template class extending Nette Template.
 It is used in the bow of presenters or control
 ```php
 /**
