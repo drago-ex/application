@@ -38,7 +38,7 @@ $submitButton->setCaption('Edit');
 It is used in the bow of presenters or control
 ```php
 /**
-* @property-read Drago\Application\UI\ExtraTemplate $template
+ * @property-read Drago\Application\UI\ExtraTemplate $template
  */
 class Presenter {}
 ```
