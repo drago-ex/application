@@ -1,7 +1,7 @@
 {
 	"name": "drago-ex/application",
 	"type": "library",
-	"description": "Basic extensions for Nette Framework",
+	"description": "Extension for Nette Framework, providing reusable UI components, alert types, and flash message handling.",
 	"license": ["MIT"],
 	"authors": [
 		{
