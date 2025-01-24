@@ -16,17 +16,25 @@ use Nette\Localization\Translator;
 
 
 /**
- * Extra control.
+ * Extra control providing basic functionality for form controls and AJAX handling.
  */
 class ExtraControl extends Control
 {
-	public const Offcanvas = 'offcanvas';
-	public const Modal = 'modal';
+	/** @var string Constant for offcanvas control. */
+	public const string Offcanvas = 'offcanvas';
+
+	/** @var string Constant for modal control. */
+	public const string Modal = 'modal';
+
+	/** @var Translator|null Translator object for localization. */
 	public ?Translator $translator = null;
 
 
 	/**
-	 * Check if there is a pair signal receiver and name.
+	 * Checks if there is a matching signal receiver and name.
+	 *
+	 * @param string $name The name of the signal to check for.
+	 * @return int|null Returns 1 if a matching signal is found, otherwise null.
 	 */
 	public function getSignal(string $name = 'edit'): ?int
 	{
@@ -36,7 +44,9 @@ class ExtraControl extends Control
 
 
 	/**
-	 * Is AJAX request?
+	 * Checks if the current request is an AJAX request.
+	 *
+	 * @return bool True if it's an AJAX request, false otherwise.
 	 */
 	public function isAjax(): bool
 	{
@@ -45,7 +55,11 @@ class ExtraControl extends Control
 
 
 	/**
-	 * Implements the basic functionality common to form controls.
+	 * Retrieves a form component by its name.
+	 *
+	 * @param Form $form The form instance to get the component from.
+	 * @param string $component The name of the component to retrieve.
+	 * @return BaseControl|null The form control component, or null if not found.
 	 */
 	public function getFormComponent(Form $form, string $component): ?BaseControl
 	{
@@ -55,7 +69,10 @@ class ExtraControl extends Control
 
 
 	/**
-	 * Returns a fully-qualified name that uniquely identifies the component within the presenter hierarchy.
+	 * Returns a unique ID for the component.
+	 *
+	 * @param string $name The name to append to the unique ID.
+	 * @return string The unique ID of the component.
 	 */
 	public function getUniqueIdComponent(string $name): string
 	{
