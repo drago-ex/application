@@ -1,4 +1,4 @@
-## Application
+## Drago Application
 The Drago Extension is a package built on top of the Nette Framework, designed to provide several useful
 components for your web applications. Below are the classes in the extension and how you can use them.
 
