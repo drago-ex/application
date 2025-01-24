@@ -20,10 +20,8 @@ use Nette\Localization\Translator;
  */
 class ExtraControl extends Control
 {
-	/** @var string Constant for offcanvas control. */
 	public const string Offcanvas = 'offcanvas';
 
-	/** @var string Constant for modal control. */
 	public const string Modal = 'modal';
 
 	/** @var Translator|null Translator object for localization. */
