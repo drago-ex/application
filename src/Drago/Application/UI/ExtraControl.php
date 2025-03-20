@@ -20,10 +20,6 @@ use Nette\Localization\Translator;
  */
 class ExtraControl extends Control
 {
-	public const string
-		Offcanvas = 'offcanvas',
-		Modal = 'modal';
-
 	/** @var Translator|null Translator object for localization. */
 	public ?Translator $translator = null;
 
@@ -63,17 +59,5 @@ class ExtraControl extends Control
 	{
 		$factory = $form[$component];
 		return $factory instanceof BaseControl ? $factory : null;
-	}
-
-
-	/**
-	 * Returns a unique ID for the component.
-	 *
-	 * @param string $name The name to append to the unique ID.
-	 * @return string The unique ID of the component.
-	 */
-	public function getUniqueIdComponent(string $name): string
-	{
-		return $this->getUniqueId() . $name;
 	}
 }
