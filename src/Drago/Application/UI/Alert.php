@@ -20,5 +20,5 @@ class Alert
 		Success = 'success',
 		Danger = 'danger',
 		Warning = 'warning',
-		nfo = 'info';
+		Info = 'info';
 }
