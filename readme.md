@@ -54,3 +54,10 @@ variables and types that can be used by default in the template.
 
 ## Flash message alert type
 - [Alert](https://github.com/drago-ex/application/blob/master/src/Drago/Application/UI/Alert.php)
+
+## Toast - Bootstrap and naja component for flash messages
+```JavaScript
+import BootstrapComponents from 'path/to/naja.toast';
+```
+
+Copy the Latte template from assets to your project.
