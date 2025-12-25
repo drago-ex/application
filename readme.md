@@ -62,7 +62,8 @@ import BootstrapComponents from 'path/to/naja.toast';
 
 ## Using toast in a latte template
 ```latte
- {include path/to/@toast.latte', flashes => $flashes}
+ {include 'path/to/@toast.latte', flashes => $flashes}
 ```
 
 Copy the Latte template from assets to your project.
+
