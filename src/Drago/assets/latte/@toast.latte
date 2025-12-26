@@ -15,7 +15,7 @@
 <div n:attr="$toastAttrs">
     {foreach $flashes as $flash}
         {var $toastItemAttrs = [
-            'class' => 'toast text-bg-' . ($flash->type ?? 'info'),
+            'class' => 'toast text-bg-' . $flash->type,
             'role' => 'alert',
             'aria-live' => 'assertive',
             'aria-atomic' => 'true',
