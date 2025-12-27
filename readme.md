@@ -7,9 +7,10 @@ components for your web applications. Below are the classes in the extension and
 [![Coding Style](https://github.com/drago-ex/application/actions/workflows/coding-style.yml/badge.svg)](https://github.com/drago-ex/application/actions/workflows/coding-style.yml)
 [![CodeFactor](https://www.codefactor.io/repository/github/drago-ex/application/badge)](https://www.codefactor.io/repository/github/drago-ex/application)
 
-## Technology
+## Requirements
 - PHP 8.3 or higher
-- composer
+- Nette Framework
+- Composer
 
 ## Installation
 ```
@@ -66,3 +67,4 @@ import BootstrapComponents from 'path/to/naja.toast';
 ```
 
 Copy the Latte template from assets to your project.
+
