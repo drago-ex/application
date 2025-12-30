@@ -69,4 +69,3 @@ import BootstrapComponents from 'path/to/naja.toast';
 ```
 
 Copy the Latte template from assets to your project.
-
