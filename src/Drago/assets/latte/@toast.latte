@@ -10,6 +10,7 @@
     'type' => 'button',
     'class' => 'btn-close btn-close-white me-2 m-auto',
     'data-bs-dismiss' => 'toast',
+    'aria-label' => 'Close'
 ]}
 
 <div n:attr="$toastAttrs">
@@ -25,7 +26,7 @@
         <div n:attr="$toastItemAttrs">
             <div class="d-flex">
                 <div class="toast-body">{$flash->message}</div>
-                <button n:attr="$toastButtonAttrs" aria-label="Close"></button>
+                <button n:attr="$toastButtonAttrs"></button>
             </div>
         </div>
     {/foreach}
