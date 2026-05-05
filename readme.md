@@ -59,8 +59,21 @@ variables and types that can be used by default in the template.
 - [Alert](https://github.com/drago-ex/application/blob/master/src/Drago/Application/UI/Alert.php)
 
 ## Toast - Bootstrap and naja component for flash messages
+
+## JavaScript setup
+Since the package is installed via Composer, add the following to your `package.json`:
+```json
+{
+  "type": "module",
+  "dependencies": {
+    "drago-application": "file:vendor/drago-ex/application"
+  }
+}
+```
+Then run `npm install`.
+
 ```JavaScript
-import BootstrapComponents from 'path/to/naja.toast';
+import ToastHandler from 'drago-application/bootstrap-toast';
 ```
 
 ## Using toast in a latte template

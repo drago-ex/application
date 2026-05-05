@@ -4,7 +4,16 @@
   "type": "module",
   "exports": {
 	".": "./src/Drago/assets/index.js",
-	"./naja.toast": "./src/Drago/assets/naja.toast.js"
+	"./bootstrap-toast": "./src/Drago/assets/bootstrap-toast.js"
+  },
+  "peerDependencies": {
+	"bootstrap": ">=5.0.0",
+	"naja": ">=3.0.0"
+  },
+  "peerDependenciesMeta": {
+	"naja": {
+	  "optional": true
+	}
   },
   "devDependencies": {
 	"bootstrap": "^5.3.3",
