@@ -9,6 +9,7 @@ use Nette\Localization\Translator;
 use Nette\Security\User;
 
 
+/** @template T of Form */
 abstract readonly class Factory
 {
 	public function __construct(
@@ -18,12 +19,14 @@ abstract readonly class Factory
 	}
 
 
+	/** @return T */
 	abstract protected function createForm(): Form;
 
 
+	/** @return T */
 	public function create(): Form
 	{
-		$form = new Form;
+		$form = $this->createForm();
 		if ($this->user->isLoggedIn()) {
 			$form->addProtection();
 		}
