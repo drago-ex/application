@@ -11,7 +11,7 @@ use Nette\Localization\Translator;
 
 
 /** Extra control providing basic functionality for form controls and AJAX handling. */
-class ExtraControl extends Control
+abstract class ExtraControl extends Control
 {
 	public ?Translator $translator = null;
 

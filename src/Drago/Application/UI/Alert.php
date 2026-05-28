@@ -6,7 +6,7 @@ namespace Drago\Application\UI;
 
 
 /** Predefined alert types for flash messages. */
-class Alert
+final class Alert
 {
 	public const string
 		Success = 'success',

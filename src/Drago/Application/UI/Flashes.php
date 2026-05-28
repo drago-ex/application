@@ -11,7 +11,7 @@ use stdClass;
 /**
  * Class representing a flash message in the application.
  */
-class Flashes
+final class Flashes
 {
 	public string|stdClass|HtmlStringable $message;
 	public string $type;

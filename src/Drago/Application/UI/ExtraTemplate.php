@@ -12,7 +12,7 @@ use stdClass;
 
 
 /** Base template class with common properties for presenters and controls. */
-class ExtraTemplate extends Template
+abstract class ExtraTemplate extends Template
 {
 	public Presenter $presenter;
 	public Control $control;
