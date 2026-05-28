@@ -18,6 +18,9 @@ abstract readonly class Factory
 	}
 
 
+	abstract protected function createForm(): Form;
+
+
 	public function create(): Form
 	{
 		$form = new Form;
