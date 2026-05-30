@@ -100,5 +100,5 @@ import ToastHandler from 'drago-application/bootstrap-toast';
 
 ## Using toast in a latte template
 ```latte
- {include 'path/to/@toast.latte', flashes => $flashes}
+{include 'path/to/@toast.latte', flashes => $flashes}
 ```
