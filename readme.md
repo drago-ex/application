@@ -19,6 +19,10 @@ components for your web applications. Below are the classes in the extension and
 composer require drago-ex/application
 ```
 
+## Project files
+The package has `extra.drago-project.skip` set to `false`, so `drago-install` copies the configured files automatically.
+If `skip` is set to `true`, copy those files manually according to the `copy` section in `composer.json`.
+
 ## Check if there is a pair signal receiver and name (default is edit).
 ```php
 $this->getSignal();
@@ -35,6 +39,24 @@ $this->isAjax();
 $form = $this['factory'];
 $submitButton = $this->getFormComponent($form, 'submit');
 $submitButton->setCaption('Edit');
+```
+
+## Form factory with a custom form class
+Use `Drago\Application\UI\Factory` when you want a typed factory for another form class, for example `ExtraForms` from `drago-ex/form`.
+
+```php
+use Drago\Form\ExtraForms;
+
+/**
+ * @extends \Drago\Application\UI\Factory<ExtraForms>
+ */
+readonly class Factory extends \Drago\Application\UI\Factory
+{
+	protected function createForm(): ExtraForms
+	{
+		return new ExtraForms;
+	}
+}
 ```
 
 ## Base template class extending Nette Template.
@@ -80,5 +102,3 @@ import ToastHandler from 'drago-application/bootstrap-toast';
 ```latte
  {include 'path/to/@toast.latte', flashes => $flashes}
 ```
-
-Copy the Latte template from assets to your project.

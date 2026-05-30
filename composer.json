@@ -28,6 +28,7 @@
 	},
 	"extra": {
 		"drago-project": {
+			"skip": false,
 			"install": {
 				"copy": {
 					"src/Drago/assets/latte": "app/Core/Widget"
