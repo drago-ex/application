@@ -20,8 +20,10 @@ composer require drago-ex/application
 ```
 
 ## Project files
-The package has `extra.drago-project.skip` set to `false`, so `drago-install` copies the configured files automatically.
-If `skip` is set to `true`, copy those files manually according to the `copy` section in `composer.json`.
+File copying is handled automatically by [drago-ex/project-installer](https://github.com/drago-ex/project-installer),
+which must be installed in your project. Without it, copy the files manually according to the `copy` section
+in this package's `composer.json`. To skip this package, set `"skip": true` under
+`extra.drago-project.packages.<package-name>` in your root `composer.json`.
 
 ## Check if there is a pair signal receiver and name (default is edit).
 ```php
