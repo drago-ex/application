@@ -62,7 +62,7 @@ readonly class Factory extends \Drago\Application\UI\Factory
 ```
 
 ## Base template class extending Nette Template.
-It is used in the bow of presenters or control
+Use it in presenter or control PHPDoc:
 ```php
 /**
  * @property-read Drago\Application\UI\ExtraTemplate $template
