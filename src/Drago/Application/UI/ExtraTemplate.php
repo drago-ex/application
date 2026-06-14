@@ -11,7 +11,6 @@ use Nette\Security\User;
 use stdClass;
 
 
-/** Base template class with common properties for presenters and controls. */
 abstract class ExtraTemplate extends Template
 {
 	public Presenter $presenter;
