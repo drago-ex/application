@@ -1,7 +1,7 @@
 {* https://getbootstrap.com/docs/5.3/content/tables/ *}
-{varType string $tableId}
-{varType string $caption}
-{varType array $options}
+{default ?string $tableId = null}
+{default ?string $caption = null}
+{default array $options = []}
 
 {do $tableTheme = $options['table'] ?? 'none'}
 {do $headTheme = $options['head'] ?? 'none'}
@@ -12,8 +12,6 @@
 	'danger' => 'table-danger',
 	'warning' => 'table-warning',
 	'info' => 'table-info',
-	'light' => 'table-light',
-	'dark' => 'table-dark',
 	'none' => null,
 ]}
 
@@ -24,10 +22,11 @@
 	'danger' => 'table-danger',
 	'warning' => 'table-warning',
 	'info' => 'table-info',
-	'light' => 'table-light',
-	'dark' => 'table-dark',
 	'none' => null,
 ]}
+
+{do $tableTheme = isset($tableThemes[$tableTheme]) ? $tableTheme : 'none'}
+{do $headTheme = isset($theadThemes[$headTheme]) ? $headTheme : 'none'}
 
 {do $tableAttrs = [
 	'id' => $tableId ?? null,
@@ -35,7 +34,7 @@
 ]}
 
 <table n:attr="$tableAttrs">
-	<caption n:ifset="$caption">{$caption}</caption>
+	<caption n:if="$caption">{$caption}</caption>
 	<thead n:class="$theadThemes[$headTheme]">
 		{block thead}{/block}
 	</thead>
