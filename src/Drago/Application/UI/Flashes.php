@@ -8,9 +8,6 @@ use Nette\HtmlStringable;
 use stdClass;
 
 
-/**
- * Class representing a flash message in the application.
- */
 final class Flashes
 {
 	public string|stdClass|HtmlStringable $message;

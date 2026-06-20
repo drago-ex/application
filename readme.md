@@ -82,7 +82,7 @@ variables and types that can be used by default in the template.
 ## Flash message alert type
 - [Alert](https://github.com/drago-ex/application/blob/master/src/Drago/Application/UI/Alert.php)
 
-## Toast - Bootstrap and naja component for flash messages
+## Toast - Bootstrap and Naja component for flash messages
 
 ## JavaScript setup
 Since the package is installed via Composer, add the following to your `package.json`:
@@ -96,11 +96,11 @@ Since the package is installed via Composer, add the following to your `package.
 ```
 Then run `npm install`.
 
-```JavaScript
+```javascript
 import ToastHandler from 'drago-application/bootstrap-toast';
 ```
 
-## Using toast in a latte template
+## Using toast in a Latte template
 ```latte
 {include 'path/to/@toast.latte', flashes: $flashes}
 ```

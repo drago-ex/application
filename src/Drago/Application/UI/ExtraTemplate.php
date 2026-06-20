@@ -8,7 +8,6 @@ use Nette\Application\UI\Presenter;
 use Nette\Bridges\ApplicationLatte\Template;
 use Nette\Forms\Control;
 use Nette\Security\User;
-use stdClass;
 
 
 abstract class ExtraTemplate extends Template

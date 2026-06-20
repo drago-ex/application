@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Drago\Application\UI;
 
 
-/** Predefined alert types for flash messages. */
 final class Alert
 {
 	public const string
