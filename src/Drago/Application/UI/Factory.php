@@ -25,7 +25,6 @@ abstract readonly class Factory
 	public function create(): Form
 	{
 		$form = $this->createForm();
-		$form->addProtection();
 		$form->setTranslator($this->translator);
 		return $form;
 	}
