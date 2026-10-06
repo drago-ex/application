@@ -60,6 +60,13 @@ abstract class ExtraControl extends Control
 	}
 
 
+	/** Sets a value in the presenter payload. */
+	public function setPayload(string $name, mixed $value): void
+	{
+		$this->getPresenter()->payload->{$name} = $value;
+	}
+
+
 	/**
 	 * Redirects the presenter and forwards the same arguments as Nette's redirect().
 	 *

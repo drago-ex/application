@@ -43,6 +43,7 @@ These methods call the corresponding presenter method, so they are useful when a
 $this->addRedirect('Homepage:default'); // Redirects the presenter.
 $this->addRedraw('content'); // Marks a presenter snippet for redraw (null redraws all snippets).
 $this->addFlashMessage('Changes saved.', 'success'); // Adds a presenter flash message.
+$this->setPayload('close', 'close'); // Sets a value in the presenter payload.
 ```
 
 `translate()` is a protected helper for formatting messages. Set the public `$translator` property to use a translator; without one, it returns the message as-is or formats its parameters with `vsprintf()`.
