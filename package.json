@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "exports": {
-	".": "./src/Drago/assets/index.js",
-	"./bootstrap-toast": "./src/Drago/assets/bootstrap-toast.js"
+	".": "./src/assets/index.js",
+	"./bootstrap-toast": "./src/assets/bootstrap-toast.js"
   },
   "peerDependencies": {
 	"bootstrap": ">=5.0.0",

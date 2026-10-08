@@ -29,7 +29,8 @@ abstract class ExtraControl extends Control
 
 	public function isAjax(): bool
 	{
-		return $this->getPresenter()->isAjax();
+		return $this->getPresenter()
+			->isAjax();
 	}
 
 
@@ -39,7 +40,8 @@ abstract class ExtraControl extends Control
 	protected function translate(string $message, string|int ...$parameters): string
 	{
 		if ($this->translator !== null) {
-			return (string) $this->translator->translate($message, ...$parameters);
+			return (string) $this->translator
+				->translate($message, ...$parameters);
 		}
 
 		return $parameters === [] ? $message : vsprintf($message, $parameters);
@@ -49,21 +51,24 @@ abstract class ExtraControl extends Control
 	/** Adds a flash message to the presenter rather than this control. */
 	public function addFlashMessage(string|\stdClass|\Stringable $message, string $type = 'info'): \stdClass
 	{
-		return $this->getPresenter()->flashMessage($message, $type);
+		return $this->getPresenter()
+			->flashMessage($message, $type);
 	}
 
 
 	/** Marks a presenter snippet for redraw rather than a snippet in this control. */
 	public function addRedraw(?string $snippet = null, bool $redraw = true): void
 	{
-		$this->getPresenter()->redrawControl($snippet, $redraw);
+		$this->getPresenter()
+			->redrawControl($snippet, $redraw);
 	}
 
 
 	/** Sets a value in the presenter payload. */
 	public function setPayload(string $name, mixed $value): void
 	{
-		$this->getPresenter()->payload->{$name} = $value;
+		$this->getPresenter()
+			->payload->{$name} = $value;
 	}
 
 
@@ -74,7 +79,8 @@ abstract class ExtraControl extends Control
 	 */
 	public function addRedirect(string $destination, mixed ...$args): void
 	{
-		$this->getPresenter()->redirect($destination, ...$args);
+		$this->getPresenter()
+			->redirect($destination, ...$args);
 	}
 
 
