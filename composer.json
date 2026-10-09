@@ -1,7 +1,7 @@
 {
 	"name": "drago-ex/application",
-	"type": "library",
 	"description": "Extension for Nette Framework, providing reusable UI components, alert types, and flash message handling.",
+	"type": "library",
 	"license": ["MIT"],
 	"authors": [
 		{
@@ -17,20 +17,23 @@
 		"nette/utils": "^4.0",
 		"nette/forms": "^3.1"
 	},
+	"suggest": {
+		"drago-ex/translator": "Configures Latte translation support for bundled templates using translation macros."
+	},
 	"require-dev": {
 		"nette/tester": "^2.5",
 		"nette/bootstrap": "^3.2",
 		"tracy/tracy": "^2.10",
 		"phpstan/phpstan-nette": "^2.0"
 	},
-	"suggest": {
-		"drago-ex/translator": "Configures Latte translation support for bundled templates using translation macros."
-	},
 	"autoload": {
 		"classmap": ["src/"],
 		"psr-4": {
 			"Drago\\": "src"
 		}
+	},
+	"scripts": {
+		"phpstan": "phpstan analyse"
 	},
 	"extra": {
 		"drago-tools": {
@@ -40,8 +43,5 @@
 				}
 			}
 		}
-	},
-	"scripts": {
-		"phpstan": "phpstan analyse"
 	}
 }
