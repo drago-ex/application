@@ -8,6 +8,7 @@ components for your web applications. Below are the classes in the extension and
 [![Coding Style](https://github.com/drago-ex/application/actions/workflows/coding-style.yml/badge.svg)](https://github.com/drago-ex/application/actions/workflows/coding-style.yml)
 
 ## Requirements
+
 - PHP >= 8.3
 - Nette Framework
 - Composer
@@ -15,28 +16,33 @@ components for your web applications. Below are the classes in the extension and
 - Naja
 
 ## Installation
+
 ```
 composer require drago-ex/application
 ```
 
 ## Project files
+
 File copying is handled automatically by [drago-ex/project-tools](https://github.com/drago-ex/project-tools),
 which must be installed in your project. Without it, copy the files manually according to the `copy` section
 in this package's `composer.json`. To skip this package, set `"skip": true` under
 `extra.drago-tools.packages.<package-name>` in your root `composer.json`.
 
 ## Check if there is a pair signal receiver and name (default is edit).
+
 ```php
 $this->getSignal();
 ```
 
 ## Is AJAX request?
+
 Shorter method in control.
 ```php
 $this->isAjax();
 ```
 
 ## Presenter helpers in `ExtraControl`
+
 These methods call the corresponding presenter method, so they are useful when an action should affect the whole page rather than only the control.
 
 ```php
@@ -53,6 +59,7 @@ $label = $this->translate('Hello %s', $name);
 ```
 
 ## Retrieves a form component by its name.
+
 ```php
 $form = $this['factory'];
 $submitButton = $this->getFormComponent($form, 'submit');
@@ -60,6 +67,7 @@ $submitButton->setCaption('Edit');
 ```
 
 ## Form factory with a custom form class
+
 Use `Drago\Application\UI\Factory` when you want a typed factory for another form class, for example `ExtraForms` from `drago-ex/form`.
 
 ```php
@@ -78,6 +86,7 @@ readonly class Factory extends \Drago\Application\UI\Factory
 ```
 
 ## Base template class extending Nette Template.
+
 Use it in presenter or control PHPDoc:
 ```php
 /**
@@ -96,11 +105,13 @@ variables and types that can be used by default in the template.
 ```
 
 ## Flash message alert type
+
 - [Alert](https://github.com/drago-ex/application/blob/master/src/Drago/Application/UI/Alert.php)
 
 ## Toast - Bootstrap and Naja component for flash messages
 
 ## JavaScript setup
+
 Since the package is installed via Composer, add the following to your `package.json`:
 ```json
 {
@@ -117,6 +128,7 @@ import ToastHandler from 'drago-application/bootstrap-toast';
 ```
 
 ## Using toast in a Latte template
+
 ```latte
 {include 'path/to/@toast.latte', flashes: $flashes}
 ```
