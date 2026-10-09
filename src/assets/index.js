@@ -1,1 +1,1 @@
-export { default as ToastHandler } from "./bootstrap-toast.js";
+export { default as ToastHandler } from './bootstrap-toast.js';
