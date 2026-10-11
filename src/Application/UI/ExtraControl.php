@@ -34,20 +34,6 @@ abstract class ExtraControl extends Control
 	}
 
 
-	/**
-	 * Translates a message, formatting its parameters when no translator is configured.
-	 */
-	protected function translate(string $message, string|int ...$parameters): string
-	{
-		if ($this->translator !== null) {
-			return (string) $this->translator
-				->translate($message, ...$parameters);
-		}
-
-		return $parameters === [] ? $message : vsprintf($message, $parameters);
-	}
-
-
 	/** Adds a flash message to the presenter rather than this control. */
 	public function addFlashMessage(string|\stdClass|\Stringable $message, string $type = 'info'): \stdClass
 	{
@@ -88,5 +74,19 @@ abstract class ExtraControl extends Control
 	{
 		$factory = $form[$component];
 		return $factory instanceof BaseControl ? $factory : null;
+	}
+
+
+	/**
+	 * Translates a message, formatting its parameters when no translator is configured.
+	 */
+	protected function translate(string $message, string|int ...$parameters): string
+	{
+		if ($this->translator !== null) {
+			return (string) $this->translator
+				->translate($message, ...$parameters);
+		}
+
+		return $parameters === [] ? $message : vsprintf($message, $parameters);
 	}
 }

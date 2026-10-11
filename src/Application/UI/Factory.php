@@ -18,14 +18,14 @@ abstract readonly class Factory
 
 
 	/** @return T */
-	abstract protected function createForm(): Form;
-
-
-	/** @return T */
 	public function create(): Form
 	{
 		$form = $this->createForm();
 		$form->setTranslator($this->translator);
 		return $form;
 	}
+
+
+	/** @return T */
+	abstract protected function createForm(): Form;
 }
