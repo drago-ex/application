@@ -2,7 +2,7 @@
 	"name": "drago-ex/application",
 	"description": "Extension for Nette Framework, providing reusable UI components, alert types, and flash message handling.",
 	"type": "library",
-	"license": ["MIT"],
+	"license": "MIT",
 	"authors": [
 		{
 			"name": "Zdeněk Papučík",
@@ -27,7 +27,9 @@
 		"phpstan/phpstan-nette": "^2.0"
 	},
 	"autoload": {
-		"classmap": ["src/"],
+		"classmap": [
+			"src/"
+		],
 		"psr-4": {
 			"Drago\\": "src"
 		}
@@ -45,6 +47,7 @@
 		}
 	},
 	"scripts": {
-		"phpstan": "phpstan analyse"
+		"phpstan": "phpstan analyse",
+		"tester": "tester tests -s"
 	}
 }
