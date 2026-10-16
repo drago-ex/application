@@ -3,7 +3,7 @@
 The Drago Extension is a package built on top of the Nette Framework, designed to provide several useful
 components for your web applications. Below are the classes in the extension and how you can use them.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/drago-ex/application/blob/master/license)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/drago-ex/application/blob/main/license)
 [![PHP version](https://badge.fury.io/ph/drago-ex%2Fapplication.svg)](https://badge.fury.io/ph/drago-ex%2Fapplication)
 [![Tests](https://github.com/drago-ex/application/actions/workflows/tests.yml/badge.svg)](https://github.com/drago-ex/application/actions/workflows/tests.yml)
 [![Coding Style](https://github.com/drago-ex/application/actions/workflows/coding-style.yml/badge.svg)](https://github.com/drago-ex/application/actions/workflows/coding-style.yml)
@@ -107,7 +107,7 @@ variables and types that can be used by default in the template.
 
 ## Flash message alert type
 
-- [Alert](https://github.com/drago-ex/application/blob/master/src/Drago/Application/UI/Alert.php)
+- [Alert](https://github.com/drago-ex/application/blob/main/src/Drago/Application/UI/Alert.php)
 
 ## Toast - Bootstrap and Naja component for flash messages
 
