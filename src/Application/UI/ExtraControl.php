@@ -20,10 +20,13 @@ abstract class ExtraControl extends Control
 	public ?Translator $translator = null;
 
 
-	public function getSignal(string $name = 'edit'): ?int
+	/** Checks whether the current request is the given signal sent to this control. */
+	public function getSignal(string $name = 'edit'): bool
 	{
 		$signal = $this->getPresenter()->getSignal();
-		return $signal && (in_array($name, $signal, true)) ? 1 : null;
+		return $signal !== null
+			&& $signal[0] === $this->getUniqueId()
+			&& $signal[1] === $name;
 	}
 
 
