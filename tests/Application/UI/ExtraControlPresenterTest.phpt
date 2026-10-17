@@ -47,16 +47,16 @@ class StubTemplate implements Nette\Application\UI\Template
 
 class HelperPresenter extends Presenter
 {
-	protected function createTemplate(?string $class = null): Nette\Application\UI\Template
-	{
-		return new StubTemplate;
-	}
-
-
 	/** @var list<array{?string, bool}> */
 	public array $redrawn = [];
 
 	public bool $ajax = false;
+
+
+	protected function createTemplate(?string $class = null): Nette\Application\UI\Template
+	{
+		return new StubTemplate;
+	}
 
 
 	public function setSignal(string $receiver, string $name): void
