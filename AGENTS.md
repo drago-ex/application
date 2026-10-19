@@ -16,6 +16,12 @@ Use this file as package-specific guidance when working in this repository. Keep
 - `.github/`: CI workflows; keep their PHP versions and commands consistent with Composer and the package scripts.
 - `composer.json`: package metadata, dependency constraints, autoloading, and available Composer scripts.
 
+## Key Parts
+- `Drago\Application\UI\ExtraControl`: control with presenter helpers. `getSignal($name)` is true only for a signal sent to this control (it checks the receiver); `addFlashMessage()`, `addRedraw()`, `setPayload()` and `addRedirect()` act on the presenter, not the control.
+- `Factory`: typed form factory that sets the translator; `ExtraTemplate`: base template with the standard Nette variables.
+- `src/assets/latte`: widgets copied into projects by drago-tools; `src/assets/*.js`: Naja extensions (each toast is shown once).
+- Tests stub the presenter and template (`tests/Application/UI`); the Latte widgets are compiled and rendered in `TemplatesTest.phpt`.
+
 ## Dependencies
 
 Composer constraints describe the package contract. Before changing integration behavior, inspect the source and the actual call sites in this package; do not infer runtime usage solely from dependency declarations.
