@@ -38,7 +38,7 @@ abstract class ExtraControl extends Control
 
 
 	/** Adds a flash message to the presenter rather than this control. */
-	public function addFlashMessage(string|\stdClass|\Stringable $message, string $type = 'info'): \stdClass
+	public function addFlashMessage(string|\stdClass|\Stringable $message, string $type = Alert::Info): \stdClass
 	{
 		return $this->getPresenter()
 			->flashMessage($message, $type);
@@ -75,8 +75,8 @@ abstract class ExtraControl extends Control
 
 	public function getFormComponent(Form $form, string $component): ?BaseControl
 	{
-		$factory = $form[$component];
-		return $factory instanceof BaseControl ? $factory : null;
+		$control = $form[$component];
+		return $control instanceof BaseControl ? $control : null;
 	}
 
 

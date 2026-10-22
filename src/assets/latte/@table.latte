@@ -3,43 +3,27 @@
 {default ?string $caption = null}
 {default array $options = []}
 
-{do $tableTheme = $options['table'] ?? 'none'}
-{do $headTheme = $options['head'] ?? 'none'}
-{do $tableThemes = [
+{do $themes = [
 	'primary' => 'table-primary',
 	'secondary' => 'table-secondary',
 	'success' => 'table-success',
 	'danger' => 'table-danger',
 	'warning' => 'table-warning',
 	'info' => 'table-info',
-	'none' => null,
 ]}
-
-{do $theadThemes = [
-	'primary' => 'table-primary',
-	'secondary' => 'table-secondary',
-	'success' => 'table-success',
-	'danger' => 'table-danger',
-	'warning' => 'table-warning',
-	'info' => 'table-info',
-	'none' => null,
-]}
-
-{do $tableTheme = isset($tableThemes[$tableTheme]) ? $tableTheme : 'none'}
-{do $headTheme = isset($theadThemes[$headTheme]) ? $headTheme : 'none'}
 
 {do $tableAttrs = [
-	'id' => $tableId ?? null,
+	'id' => $tableId,
 	'class' => 'table table-sm table-hover table-borderless caption-top',
 ]}
 
 <table n:attr="$tableAttrs">
 	<caption n:if="$caption">{$caption}</caption>
-	<thead n:class="$theadThemes[$headTheme]">
+	<thead n:class="$themes[$options['head'] ?? ''] ?? null">
 		{block thead}{/block}
 	</thead>
 
-	<tbody n:class="$tableThemes[$tableTheme]">
+	<tbody n:class="$themes[$options['table'] ?? ''] ?? null">
 		{block body}{/block}
 	</tbody>
 </table>

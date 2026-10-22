@@ -78,3 +78,19 @@ test('The table widget falls back to no theme for unknown names', function () {
 	Assert::true($dom->has('thead.table-primary'));
 	Assert::false($dom->has('tbody[class]'));
 });
+
+
+test('The table widget renders without options', function () {
+	$latte = createLatte();
+	$latte->setLoader(new StringLoader([
+		'@table.latte' => file_get_contents(__DIR__ . '/../../../src/assets/latte/@table.latte'),
+		'page' => '{embed "@table.latte"}{block body}<tr><td>Row</td></tr>{/block}{/embed}',
+	]));
+
+	$dom = Tester\DomQuery::fromHtml($latte->renderToString('page'));
+	Assert::false($dom->has('table[id]'));
+	Assert::false($dom->has('caption'));
+	Assert::false($dom->has('thead[class]'));
+	Assert::false($dom->has('tbody[class]'));
+	Assert::true($dom->has('tbody td'));
+});

@@ -146,7 +146,7 @@ Then run `npm install`.
 
 ```javascript
 import naja from 'naja';
-import ToastHandler from 'drago-application/bootstrap-toast';
+import { ToastHandler } from 'drago-application';
 
 naja.registerExtension(new ToastHandler());
 ```
