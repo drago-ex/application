@@ -20,16 +20,6 @@ abstract class ExtraControl extends Control
 	public ?Translator $translator = null;
 
 
-	/** Checks whether the current request is the given signal sent to this control. */
-	public function getSignal(string $name = 'edit'): bool
-	{
-		$signal = $this->getPresenter()->getSignal();
-		return $signal !== null
-			&& $signal[0] === $this->getUniqueId()
-			&& $signal[1] === $name;
-	}
-
-
 	public function isAjax(): bool
 	{
 		return $this->getPresenter()
@@ -50,14 +40,6 @@ abstract class ExtraControl extends Control
 	{
 		$this->getPresenter()
 			->redrawControl($snippet, $redraw);
-	}
-
-
-	/** Sets a value in the presenter payload. */
-	public function setPayload(string $name, mixed $value): void
-	{
-		$this->getPresenter()
-			->payload->{$name} = $value;
 	}
 
 

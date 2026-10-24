@@ -17,7 +17,7 @@ Use this file as package-specific guidance when working in this repository. Keep
 - `composer.json`: package metadata, dependency constraints, autoloading, and available Composer scripts.
 
 ## Key Parts
-- `Drago\Application\UI\ExtraControl`: control with presenter helpers. `getSignal($name)` is true only for a signal sent to this control (it checks the receiver); `addFlashMessage()`, `addRedraw()`, `setPayload()` and `addRedirect()` act on the presenter, not the control.
+- `Drago\Application\UI\ExtraControl`: control with presenter helpers: `isAjax()`, `addFlashMessage()`, `addRedraw()` and `addRedirect()` act on the presenter, not the control. There is no payload helper on purpose: drago-ex/component sets its payload itself, so it works in any Nette Control.
 - `Factory`: typed form factory that sets the translator; `ExtraTemplate`: base template with the standard Nette variables.
 - `src/assets/latte`: widgets copied into projects by drago-tools; `src/assets/*.js`: Naja extensions (each toast is shown once).
 - Tests stub the presenter and template (`tests/Application/UI`); the Latte widgets are compiled and rendered in `TemplatesTest.phpt`.

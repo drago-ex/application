@@ -35,20 +35,6 @@ in this package's `composer.json`. To skip this package, set `"skip": true` unde
 
 Extend `Drago\Application\UI\ExtraControl` instead of `Nette\Application\UI\Control`.
 
-### Signal check
-
-`getSignal()` returns `true` when the current request is the given signal (default `edit`) sent to this control:
-
-```php
-if ($this->getSignal()) {
-	// edit mode of this control
-}
-
-if ($this->getSignal('delete')) {
-	// ...
-}
-```
-
 ### AJAX request
 
 Shortcut for the presenter check:
@@ -64,7 +50,6 @@ These methods call the corresponding presenter method, so they are useful when a
 $this->addRedirect('Homepage:default'); // Redirects the presenter.
 $this->addRedraw('content'); // Marks a presenter snippet for redraw (null redraws all snippets).
 $this->addFlashMessage('Changes saved.', 'success'); // Adds a presenter flash message.
-$this->setPayload('close', 'close'); // Sets a value in the presenter payload.
 ```
 
 `translate()` is a protected helper for formatting messages. Set the public `$translator` property to use a translator; without one, it returns the message as-is or formats its parameters with `vsprintf()`.

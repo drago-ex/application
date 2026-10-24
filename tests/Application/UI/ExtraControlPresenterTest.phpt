@@ -59,14 +59,6 @@ class HelperPresenter extends Presenter
 	}
 
 
-	public function setSignal(string $receiver, string $name): void
-	{
-		$reflection = new ReflectionClass(Presenter::class);
-		$reflection->getProperty('signalReceiver')->setValue($this, $receiver);
-		$reflection->getProperty('signal')->setValue($this, $name);
-	}
-
-
 	public function isAjax(): bool
 	{
 		return $this->ajax;
@@ -88,35 +80,9 @@ function createControls(): array
 	$presenter->injectPrimary($request, $response, session: new Http\Session($request, $response));
 
 	$grid = new HelperControl;
-	$form = new HelperControl;
 	$presenter->addComponent($grid, 'grid');
-	$presenter->addComponent($form, 'form');
-	return [$presenter, $grid, $form];
+	return [$presenter, $grid];
 }
-
-
-test('getSignal() is true only for a signal sent to this control', function () {
-	[$presenter, $grid, $form] = createControls();
-	$presenter->setSignal('grid', 'edit');
-
-	Assert::true($grid->getSignal());
-	Assert::false($form->getSignal());
-	Assert::false($grid->getSignal('delete'));
-});
-
-
-test('getSignal() ignores a component whose name matches the signal', function () {
-	[$presenter, $grid] = createControls();
-	$presenter->setSignal('edit', 'save');
-
-	Assert::false($grid->getSignal());
-});
-
-
-test('getSignal() is false without a signal', function () {
-	[, $grid] = createControls();
-	Assert::false($grid->getSignal());
-});
 
 
 test('Helpers act on the presenter', function () {
@@ -132,9 +98,6 @@ test('Helpers act on the presenter', function () {
 
 	$grid->addRedraw('content');
 	Assert::same([['content', true]], $presenter->redrawn);
-
-	$grid->setPayload('close', 'modal');
-	Assert::same('modal', $presenter->getPayload()->close);
 });
 
 

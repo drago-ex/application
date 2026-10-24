@@ -35,20 +35,6 @@ v `composer.json` tohoto balíčku. Pro přeskočení balíčku nastavte `"skip"
 
 Místo `Nette\Application\UI\Control` dědte z `Drago\Application\UI\ExtraControl`.
 
-### Kontrola signálu
-
-`getSignal()` vrací `true`, když je aktuální požadavek daný signál (výchozí `edit`) poslaný této komponentě:
-
-```php
-if ($this->getSignal()) {
-	// režim úprav této komponenty
-}
-
-if ($this->getSignal('delete')) {
-	// ...
-}
-```
-
 ### AJAXový požadavek
 
 Zkratka pro kontrolu na presenteru:
@@ -64,7 +50,6 @@ Tyto metody volají odpovídající metodu presenteru, takže se hodí, když m�
 $this->addRedirect('Homepage:default'); // Přesměruje presenter.
 $this->addRedraw('content'); // Označí snippet presenteru k překreslení (null překreslí všechny snippety).
 $this->addFlashMessage('Changes saved.', 'success'); // Přidá flash zprávu presenteru.
-$this->setPayload('close', 'close'); // Nastaví hodnotu v payloadu presenteru.
 ```
 
 `translate()` je chráněný pomocník pro formátování zpráv. Pro použití překladače nastavte veřejnou vlastnost `$translator`; bez něj vrátí zprávu beze změny, případně dosadí parametry přes `vsprintf()`.
