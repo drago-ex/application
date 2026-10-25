@@ -33,7 +33,7 @@ v `composer.json` tohoto balíčku. Pro přeskočení balíčku nastavte `"skip"
 
 ## ExtraControl
 
-Místo `Nette\Application\UI\Control` dědte z `Drago\Application\UI\ExtraControl`.
+Místo `Nette\Application\UI\Control` děďte z `Drago\Application\UI\ExtraControl`.
 
 ### AJAXový požadavek
 
@@ -47,9 +47,9 @@ $this->isAjax();
 Tyto metody volají odpovídající metodu presenteru, takže se hodí, když má akce ovlivnit celou stránku, a ne jen komponentu.
 
 ```php
-$this->addRedirect('Homepage:default'); // Přesměruje presenter.
-$this->addRedraw('content'); // Označí snippet presenteru k překreslení (null překreslí všechny snippety).
-$this->addFlashMessage('Changes saved.', 'success'); // Přidá flash zprávu presenteru.
+$this->addRedirect('Homepage:default'); // Redirects the presenter.
+$this->addRedraw('content'); // Marks a presenter snippet for redraw (null redraws all snippets).
+$this->addFlashMessage('Changes saved.', 'success'); // Adds a presenter flash message.
 ```
 
 `translate()` je chráněný pomocník pro formátování zpráv. Pro použití překladače nastavte veřejnou vlastnost `$translator`; bez něj vrátí zprávu beze změny, případně dosadí parametry přes `vsprintf()`.
@@ -117,7 +117,7 @@ $this->flashMessage('Saved.', Alert::Success);
 
 ## Toast - komponenta Bootstrapu a Naja pro flash zprávy
 
-## Nastavení JavaScriptu
+### Nastavení JavaScriptu
 
 Balíček se instaluje přes Composer, proto přidejte do `package.json` následující:
 ```json
@@ -139,7 +139,7 @@ naja.registerExtension(new ToastHandler());
 
 Každý toast se zobrazí jen jednou, včetně toastů přidaných AJAXovými snippety, a po skrytí se odstraní.
 
-## Toast v šabloně Latte
+### Toast v šabloně Latte
 
 ```latte
 {include 'path/to/@toast.latte', flashes: $flashes}

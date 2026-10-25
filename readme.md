@@ -118,7 +118,7 @@ $this->flashMessage('Saved.', Alert::Success);
 
 ## Toast - Bootstrap and Naja component for flash messages
 
-## JavaScript setup
+### JavaScript setup
 
 Since the package is installed via Composer, add the following to your `package.json`:
 ```json
@@ -140,7 +140,7 @@ naja.registerExtension(new ToastHandler());
 
 Each toast is shown once, including toasts added by AJAX snippets, and removed after it hides.
 
-## Using toast in a Latte template
+### Using toast in a Latte template
 
 ```latte
 {include 'path/to/@toast.latte', flashes: $flashes}
