@@ -7,7 +7,7 @@ Use this file as package-specific guidance when working in this repository. Keep
 - **Type**: library
 - **Purpose**: Extension for Nette Framework, providing reusable UI components, alert types, and flash message handling.
 - **PHP**: >=8.3 <9
-- **Runtime dependencies**: nette/application (^3.2), nette/security (^3.1), nette/forms (^3.1), latte/latte (^3.0)
+- **Runtime dependencies**: nette/application (^3.2), nette/security (^3.1), nette/utils (^4.0, Translator and HtmlStringable are used directly), nette/forms (^3.1), latte/latte (^3.0)
 - **License**: MIT
 
 ## Repository Layout
