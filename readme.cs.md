@@ -1,7 +1,5 @@
 # Drago Application
 
-[English](readme.md) | Čeština
-
 Drago Extension je balíček postavený na Nette Frameworku, který přináší několik užitečných
 komponent pro webové aplikace. Níže jsou popsané třídy rozšíření a jejich použití.
 
