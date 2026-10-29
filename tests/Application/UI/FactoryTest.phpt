@@ -1,10 +1,8 @@
-<?php
+<?php declare(strict_types=1);
 
 /**
  * Test: Drago\Application\UI\Factory
  */
-
-declare(strict_types=1);
 
 use Drago\Application\UI\Factory;
 use Nette\Application\UI\Form;

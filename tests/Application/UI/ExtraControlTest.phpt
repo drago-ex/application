@@ -1,10 +1,8 @@
-<?php
+<?php declare(strict_types=1);
 
 /**
  * Test: Drago\Application\UI\ExtraControl
  */
-
-declare(strict_types=1);
 
 use Drago\Application\UI\ExtraControl;
 use Nette\Application\UI\Form;

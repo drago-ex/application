@@ -1,10 +1,8 @@
-<?php
+<?php declare(strict_types=1);
 
 /**
  * Test: Drago\Application\UI\Flashes
  */
-
-declare(strict_types=1);
 
 use Drago\Application\UI\Alert;
 use Drago\Application\UI\Flashes;

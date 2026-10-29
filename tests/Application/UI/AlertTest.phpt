@@ -1,10 +1,8 @@
-<?php
+<?php declare(strict_types=1);
 
 /**
  * Test: Drago\Application\UI\Alert
  */
-
-declare(strict_types=1);
 
 use Drago\Application\UI\Alert;
 use Tester\Assert;
