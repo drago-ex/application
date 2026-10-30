@@ -9,9 +9,7 @@ use Nette\Forms\Controls\BaseControl;
 use Nette\Localization\Translator;
 
 
-/**
- * Adds concise helpers for presenter-level actions alongside Control's local methods.
- */
+/** Adds concise helpers for presenter-level actions alongside Control's local methods. */
 abstract class ExtraControl extends Control
 {
 	public ?Translator $translator = null;
@@ -59,9 +57,7 @@ abstract class ExtraControl extends Control
 	}
 
 
-	/**
-	 * Translates a message, formatting its parameters when no translator is configured.
-	 */
+	/** Translates a message, formatting its parameters when no translator is configured. */
 	protected function translate(string $message, string|int ...$parameters): string
 	{
 		if ($this->translator !== null) {
