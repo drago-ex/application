@@ -113,27 +113,8 @@ $this->flashMessage('Saved.', Alert::Success);
 
 ## Toast - komponenta Bootstrapu a Naja pro flash zprávy
 
-### Nastavení JavaScriptu
-
-Balíček se instaluje přes Composer, proto přidejte do `package.json` následující:
-```json
-{
-  "type": "module",
-  "dependencies": {
-    "drago-application": "file:vendor/drago-ex/application"
-  }
-}
-```
-Potom spusťte `npm install`.
-
-```javascript
-import naja from 'naja';
-import { ToastHandler } from 'drago-application';
-
-naja.registerExtension(new ToastHandler());
-```
-
-Každý toast se zobrazí jen jednou, včetně toastů přidaných AJAXovými snippety, a po skrytí se odstraní.
+Každý toast se zobrazí jen jednou, včetně toastů přidaných AJAXovými snippety, a po skrytí se odstraní. Jeho skript
+zaregistrujte podle oddílu Assety.
 
 ### Toast v šabloně Latte
 
@@ -153,4 +134,26 @@ Každý toast se zobrazí jen jednou, včetně toastů přidaných AJAXovými sn
 		<tr n:foreach="$users as $user"><td>{$user->name}</td></tr>
 	{/block}
 {/embed}
+```
+
+## Assety
+
+Balíček se instaluje přes Composer, proto přidejte do `package.json` následující:
+```json
+{
+  "type": "module",
+  "dependencies": {
+    "drago-application": "file:vendor/drago-ex/application"
+  }
+}
+```
+Potom spusťte `npm install`.
+
+### Toast
+
+```javascript
+import naja from 'naja';
+import { ToastHandler } from 'drago-application';
+
+naja.registerExtension(new ToastHandler());
 ```

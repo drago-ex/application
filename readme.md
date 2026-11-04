@@ -114,27 +114,8 @@ $this->flashMessage('Saved.', Alert::Success);
 
 ## Toast - Bootstrap and Naja component for flash messages
 
-### JavaScript setup
-
-Since the package is installed via Composer, add the following to your `package.json`:
-```json
-{
-  "type": "module",
-  "dependencies": {
-    "drago-application": "file:vendor/drago-ex/application"
-  }
-}
-```
-Then run `npm install`.
-
-```javascript
-import naja from 'naja';
-import { ToastHandler } from 'drago-application';
-
-naja.registerExtension(new ToastHandler());
-```
-
-Each toast is shown once, including toasts added by AJAX snippets, and removed after it hides.
+Each toast is shown once, including toasts added by AJAX snippets, and removed after it hides. Register its script
+as shown in Assets.
 
 ### Using toast in a Latte template
 
@@ -154,4 +135,26 @@ Each toast is shown once, including toasts added by AJAX snippets, and removed a
 		<tr n:foreach="$users as $user"><td>{$user->name}</td></tr>
 	{/block}
 {/embed}
+```
+
+## Assets
+
+Since the package is installed via Composer, add the following to your `package.json`:
+```json
+{
+  "type": "module",
+  "dependencies": {
+    "drago-application": "file:vendor/drago-ex/application"
+  }
+}
+```
+Then run `npm install`.
+
+### Toast
+
+```javascript
+import naja from 'naja';
+import { ToastHandler } from 'drago-application';
+
+naja.registerExtension(new ToastHandler());
 ```
