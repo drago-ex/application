@@ -1,7 +1,7 @@
 # Drago Application
 
-The Drago Extension is a package built on top of the Nette Framework, designed to provide several useful
-components for your web applications. Below are the classes in the extension and how you can use them.
+Base classes for Nette controls, templates and form factories, flash message types, and Latte widgets for
+flash messages, toasts and tables.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/drago-ex/application/blob/main/license)
 [![PHP version](https://badge.fury.io/ph/drago-ex%2Fapplication.svg)](https://badge.fury.io/ph/drago-ex%2Fapplication)
@@ -22,10 +22,8 @@ components for your web applications. Below are the classes in the extension and
 composer require drago-ex/application
 ```
 
-## Files copied into the project
-
-The files are copied into the project by [drago-ex/project-tools](https://github.com/drago-ex/project-tools),
-as set in `extra.drago-tools` of this package's `composer.json`.
+[Project Tools](https://github.com/drago-ex/project-tools) copies the Latte widgets `@flash-message`, `@table` and
+`@toast` into `app/Presentation/Accessory/Widget`, where you adapt them.
 
 ## ExtraControl
 
@@ -66,7 +64,7 @@ $submitButton->setCaption('Edit');
 
 ## Form Factory
 
-Use `Drago\Application\UI\Factory` when you want a typed factory for another form class, for example `ExtraForms` from `drago-ex/form`.
+`Drago\Application\UI\Factory` creates forms with the translator set (autowired). Extend it for a typed factory of another form class, for example `ExtraForms` from `drago-ex/form`:
 
 ```php
 use Drago\Form\ExtraForms;
@@ -95,8 +93,7 @@ Use it in presenter or control PHPDoc:
 class Presenter {}
 ```
 
-In Latte, we will use these macros to insert into the template, which will tell us the
-variables and types that can be used by default in the template.
+In Latte, declare the template type and the flash messages:
 ```latte
 {templateType Drago\Application\UI\ExtraTemplate}
 {varType Drago\Application\UI\Flashes[] $flashes}
@@ -139,7 +136,7 @@ as shown in Assets.
 
 ## Assets
 
-Since the package is installed via Composer, add the following to your `package.json`:
+Add the Composer package as a local npm dependency in `package.json` (Drago Project installs it by itself):
 ```json
 {
   "type": "module",
