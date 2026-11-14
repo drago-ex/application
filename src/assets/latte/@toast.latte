@@ -1,32 +1,42 @@
+{* flash messages as toasts in the look of the module dialogs of compostrap (toast-status): a thin line and an icon in
+   the color of the message type; shown and removed by ToastHandler of drago-ex/application *}
 {varType Drago\Application\UI\Flashes[] $flashes}
 {do $toastAttrs = [
 	'id' => 'toastContainer',
-	'class' => 'toast-container position-fixed top-0 end-0 p-3',
+	'class' => 'toast-container position-fixed bottom-0 end-0 p-3',
 	'aria-live' => 'polite',
 	'aria-atomic' => 'true',
 ]}
 
 {do $toastButtonAttrs = [
 	'type' => 'button',
-	'class' => 'btn-close btn-close-white me-2 m-auto',
+	'class' => 'btn-close',
 	'data-bs-dismiss' => 'toast',
+]}
+
+{do $toastIcons = [
+	'success' => 'bi bi-check-circle',
+	'danger' => 'bi bi-exclamation-triangle',
+	'warning' => 'bi bi-exclamation-circle',
+	'info' => 'bi bi-info-circle',
 ]}
 
 <div n:attr="$toastAttrs">
 	{foreach $flashes as $flash}
 		{do $toastItemAttrs = [
-			'class' => 'toast text-bg-' . $flash->type,
-			'role' => 'alert',
-			'aria-live' => 'assertive',
+			'class' => 'toast toast-status theme-' . $flash->type,
+			'role' => $flash->type === 'danger' ? 'alert' : 'status',
+			'aria-live' => $flash->type === 'danger' ? 'assertive' : 'polite',
 			'aria-atomic' => 'true',
 			'data-bs-delay' => '3000',
 			'data-bs-autohide' => 'true',
 		]}
 		<div n:attr="$toastItemAttrs">
-			<div class="d-flex">
-				<div class="toast-body">{_$flash->message}</div>
-				<button n:attr="$toastButtonAttrs" aria-label="{_'Close'}"></button>
+			<i class="{$toastIcons[$flash->type] ?? 'bi bi-info-circle'} toast-status-icon" aria-hidden="true"></i>
+			<div class="toast-status-body">
+				<strong class="toast-status-title mb-0">{_$flash->message}</strong>
 			</div>
+			<button n:attr="$toastButtonAttrs" aria-label="{_'Close'}"></button>
 		</div>
 	{/foreach}
 </div>

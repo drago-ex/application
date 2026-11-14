@@ -58,8 +58,21 @@ test('Toasts render inside the toast container', function () {
 	);
 
 	$dom = Tester\DomQuery::fromHtml($html);
-	Assert::true($dom->has('#toastContainer .toast.text-bg-danger'));
-	Assert::same('Deleted', trim((string) $dom->find('.toast-body')[0]));
+	Assert::true($dom->has('#toastContainer.bottom-0.end-0 .toast.toast-status.theme-danger[role=alert]'));
+	Assert::true($dom->has('.toast i.bi-exclamation-triangle.toast-status-icon'));
+	Assert::same('Deleted', trim((string) $dom->find('.toast-status-title')[0]));
+});
+
+
+test('A toast that is not an error is a polite status', function () {
+	$html = createLatte()->renderToString(
+		__DIR__ . '/../../../src/assets/latte/@toast.latte',
+		['flashes' => [flash('Saved', Alert::Success)]],
+	);
+
+	$dom = Tester\DomQuery::fromHtml($html);
+	Assert::true($dom->has('.toast.theme-success[role=status][aria-live=polite]'));
+	Assert::true($dom->has('.toast i.bi-check-circle'));
 });
 
 

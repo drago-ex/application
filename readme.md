@@ -1,7 +1,7 @@
 # Drago Application
 
 Base classes for Nette controls, templates and form factories, flash message types, and Latte widgets for
-flash messages, toasts and tables.
+flash messages, toasts and tables. The toasts are in the look of [compostrap](https://github.com/compostrap/compostrap).
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/drago-ex/application/blob/main/license)
 [![PHP version](https://badge.fury.io/ph/drago-ex%2Fapplication.svg)](https://badge.fury.io/ph/drago-ex%2Fapplication)
@@ -14,6 +14,7 @@ flash messages, toasts and tables.
 - Nette Framework
 - Composer
 - Bootstrap
+- [compostrap](https://github.com/compostrap/compostrap) (the styles of the toasts)
 - Naja
 
 ## Installation
@@ -111,8 +112,9 @@ $this->flashMessage('Saved.', Alert::Success);
 
 ## Toast - Bootstrap and Naja component for flash messages
 
-Each toast is shown once, including toasts added by AJAX snippets, and removed after it hides. Register its script
-as shown in Assets.
+A flash message is a toast at the bottom right: a thin line and an icon in the color of its type (`toast-status` of the
+module `dialogs` of compostrap), an error read at once by a screen reader, other types politely. Each toast is shown
+once, including toasts added by AJAX snippets, and removed after it hides. Register its script as shown in Assets.
 
 ### Using toast in a Latte template
 
@@ -154,4 +156,8 @@ import naja from 'naja';
 import { ToastHandler } from 'drago-application';
 
 naja.registerExtension(new ToastHandler());
+```
+
+```scss
+@import 'compostrap/src/scss/dialogs';
 ```

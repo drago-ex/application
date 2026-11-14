@@ -20,6 +20,7 @@ Use this file as package-specific guidance when working in this repository. Keep
 - `Drago\Application\UI\ExtraControl`: control with presenter helpers: `isAjax()`, `addFlashMessage()`, `addRedraw()` and `addRedirect()` act on the presenter, not the control. There is no payload helper on purpose: drago-ex/component sets its payload itself, so it works in any Nette Control.
 - `Factory`: typed form factory that sets the translator; `ExtraTemplate`: base template with the standard Nette variables.
 - `src/assets/latte`: widgets copied into projects by drago-tools; `src/assets/*.js`: Naja extensions (each toast is shown once).
+- `@toast` is written in the classes of compostrap (`toast-status theme-<type>` with an icon, the container at the bottom right, `role=alert` only for danger); its styles are the module `dialogs` of compostrap, the package ships no CSS.
 - Tests stub the presenter and template (`tests/Application/UI`); the Latte widgets are compiled and rendered in `TemplatesTest.phpt`.
 
 ## Dependencies
