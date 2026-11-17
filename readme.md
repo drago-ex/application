@@ -158,6 +158,9 @@ import { ToastHandler } from 'drago-application';
 naja.registerExtension(new ToastHandler());
 ```
 
+The look of the toasts comes from the module `dialogs` of compostrap (Drago Project already imports it in
+`assets/core/base.scss`):
+
 ```scss
 @import 'compostrap/src/scss/dialogs';
 ```
